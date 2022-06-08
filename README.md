@@ -17,3 +17,6 @@ The player must exel to be there in time, obstacles make the game harder, there 
 # 3D Tower-Defense
 This game is an attemp to make a 3D game in unity, it was done following the exellent tutorial of Brackeys https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA
 Build towers to stop waves of 3D bubbles, there is 2 levels, have fun !
+
+# Lost Family
+This game is for the 3rd GameJAM i made, you must find every member of your family in a mario-like level. The game is a platformer with ennemies, i tried new things with this one, still limited in 48h. I made some shaders, flames effects, better and way more animations, player combat, ennemies attack, game design, tilemap. The one i have the biggest amount of fun yet !
