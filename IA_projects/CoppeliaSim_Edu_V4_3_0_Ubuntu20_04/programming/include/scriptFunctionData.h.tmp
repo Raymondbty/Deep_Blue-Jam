@@ -1,0 +1,39 @@
+
+
+
+#include "scriptFunctionDataItem.h"
+#include "simLib.h"
+
+#define SIM_SCRIPT_ARG_NULL_ALLOWED (65536)
+
+class CScriptFunctionData  
+{
+public:
+    CScriptFunctionData();
+    virtual ~CScriptFunctionData();
+
+    
+    
+    _Bool readDataFromStack(int stackHandle,const int* expectedArguments,int requiredArgumentCount,const char* functionName);
+    std::vector<CScriptFunctionDataItem>* getInDataPtr();
+    void pushOutData(const CScriptFunctionDataItem& dataItem);
+    void writeDataToStack(int stackHandle);
+    
+
+
+    
+    
+    void pushOutData_scriptFunctionCall(const CScriptFunctionDataItem& dataItem);
+    void writeDataToStack_scriptFunctionCall(int stackHandle);
+    _Bool readDataFromStack_scriptFunctionCall(int stackHandle,const int* expectedArguments,int requiredArgumentCount,const char* functionName);
+    std::vector<CScriptFunctionDataItem>* getOutDataPtr_scriptFunctionCall();
+    
+
+protected:
+    _Bool _readData(int stack,const int* expectedArguments,int requiredArgumentCount,const char* functionName,const char* argumentText1,const char* argumentText2,std::vector<CScriptFunctionDataItem>& inOutData);
+    void _writeData(int stack,std::vector<CScriptFunctionDataItem>& inOutData);
+
+    std::vector<CScriptFunctionDataItem> _inData;
+    std::vector<CScriptFunctionDataItem> _outData;
+};
+

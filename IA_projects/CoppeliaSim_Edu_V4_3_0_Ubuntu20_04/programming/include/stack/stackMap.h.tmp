@@ -1,0 +1,119 @@
+
+
+
+#include "stackObject.h"
+#include <map>
+
+class CStackArray;
+
+class CStackMap : public CStackObject
+{
+public:
+    CStackMap();
+    virtual ~CStackMap();
+
+    std::string toString() const;
+
+    void appendTopStackItem(const char* key,int stackId);
+    void appendTopStackItem(int key,int stackId);
+    void appendTopStackItem(_Bool key,int stackId);
+
+    CStackObject* copyYourself();
+
+    void setNull(const char* key);
+    void setBool(const char* key,_Bool d);
+    void setFloat(const char* key,float d);
+    void setDouble(const char* key,double d);
+    void setInt(const char* key,int d);
+    void setString(const char* key,const std::string& d);
+    void setString(const char* key,const char* d,size_t bufferLength);
+    void setArray(const char* key,CStackArray* arr);
+    void setMap(const char* key,CStackMap* map);
+
+    void setNull(int key);
+    void setBool(int key,_Bool d);
+    void setFloat(int key,float d);
+    void setDouble(int key,double d);
+    void setInt(int key,int d);
+    void setString(int key,const std::string& d);
+    void setString(int key,const char* d,size_t bufferLength);
+    void setArray(int key,CStackArray* arr);
+    void setMap(int key,CStackMap* map);
+
+    void setNull(_Bool key);
+    void setBool(_Bool key,_Bool d);
+    void setFloat(_Bool key,float d);
+    void setDouble(_Bool key,double d);
+    void setInt(_Bool key,int d);
+    void setString(_Bool key,const std::string& d);
+    void setString(_Bool key,const char* d,size_t bufferLength);
+    void setArray(_Bool key,CStackArray* arr);
+    void setMap(_Bool key,CStackMap* map);
+
+    _Bool isKeyPresent(const char* key);
+    _Bool isNull(const char* key);
+    _Bool isBool(const char* key);
+    _Bool isNumber(const char* key);
+    _Bool isString(const char* key);
+    _Bool isArray(const char* key,size_t minSize=0);
+    _Bool isMap(const char* key);
+
+    _Bool isKeyPresent(int key);
+    _Bool isNull(int key);
+    _Bool isBool(int key);
+    _Bool isNumber(int key);
+    _Bool isString(int key);
+    _Bool isArray(int key,size_t minSize=0);
+    _Bool isMap(int key);
+
+    _Bool isKeyPresent(_Bool key);
+    _Bool isNull(_Bool key);
+    _Bool isBool(_Bool key);
+    _Bool isNumber(_Bool key);
+    _Bool isString(_Bool key);
+    _Bool isArray(_Bool key,size_t minSize=0);
+    _Bool isMap(_Bool key);
+
+    _Bool getBool(const char* key);
+    float getFloat(const char* key);
+    double getDouble(const char* key);
+    int getInt(const char* key);
+    std::string getString(const char* key);
+    CStackArray* getArray(const char* key);
+    CStackMap* getMap(const char* key);
+
+    _Bool getBool(int key);
+    float getFloat(int key);
+    double getDouble(int key);
+    int getInt(int key);
+    std::string getString(int key);
+    CStackArray* getArray(int key);
+    CStackMap* getMap(int key);
+
+    _Bool getBool(_Bool key);
+    float getFloat(_Bool key);
+    double getDouble(_Bool key);
+    int getInt(_Bool key);
+    std::string getString(_Bool key);
+    CStackArray* getArray(_Bool key);
+    CStackMap* getMap(_Bool key);
+
+    _Bool contains(const char* key,int theType=-1,size_t theMinSizeIfArray=0,_Bool onlyNumbersInArray=false);
+    _Bool contains(int key,int theType=-1,size_t theMinSizeIfArray=0,_Bool onlyNumbersInArray=false);
+    _Bool contains(_Bool key,int theType=-1,size_t theMinSizeIfArray=0,_Bool onlyNumbersInArray=false);
+
+    std::map<std::string,CStackObject*>* getKeyValuePairs();
+    std::map<std::string,CStackObject*>* getKeyValuePairsKStr();
+    std::map<int,CStackObject*>* getKeyValuePairsKInt();
+    std::map<bool,CStackObject*>* getKeyValuePairsKBool();
+
+protected:
+    void _remove(const char* key);
+    void _remove(int key);
+    void _remove(_Bool key);
+
+    std::map<std::string,CStackObject*> _objectValuesKStr;
+    std::map<int,CStackObject*> _objectValuesKInt;
+    std::map<bool,CStackObject*> _objectValuesKBool;
+};
+

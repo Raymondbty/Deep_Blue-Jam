@@ -1,0 +1,42 @@
+
+
+
+#include <vector>
+#include <string>
+
+class CLuaFunctionDataItem
+{
+public:
+    CLuaFunctionDataItem();
+    CLuaFunctionDataItem(_Bool v);
+    CLuaFunctionDataItem(int v);
+    CLuaFunctionDataItem(float v);
+    CLuaFunctionDataItem(double v);
+    CLuaFunctionDataItem(const std::string& v);
+    CLuaFunctionDataItem(const char* bufferPtr,unsigned int bufferLength);
+
+    CLuaFunctionDataItem(const std::vector<bool>& v);
+    CLuaFunctionDataItem(const std::vector<int>& v);
+    CLuaFunctionDataItem(const std::vector<float>& v);
+    CLuaFunctionDataItem(const std::vector<double>& v);
+    CLuaFunctionDataItem(const std::vector<std::string>& v);
+
+    virtual ~CLuaFunctionDataItem();
+
+    _Bool isTable();
+    int getType();
+    void setNilTable(int size);
+    int getNilTableSize();
+
+    std::vector<bool> boolData;
+    std::vector<int> intData;
+    std::vector<float> floatData;
+    std::vector<double> doubleData;
+    std::vector<std::string> stringData;
+
+protected:
+    int _nilTableSize;
+    _Bool _isTable;
+    int _type; 
+};
+

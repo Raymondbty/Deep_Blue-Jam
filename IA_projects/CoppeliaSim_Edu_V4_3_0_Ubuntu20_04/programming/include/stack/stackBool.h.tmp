@@ -1,0 +1,22 @@
+
+
+
+#include "stackObject.h"
+
+class CStackBool : public CStackObject
+{
+public:
+    CStackBool(_Bool theValue);
+    virtual ~CStackBool();
+
+    std::string toString() const;
+
+    CStackObject* copyYourself();
+
+    _Bool getValue();
+    void setValue(_Bool theValue);
+
+protected:
+    _Bool _value;
+};
+
