@@ -1,0 +1,136 @@
+\hypertarget{structserver__s}{}\doxysection{server\+\_\+s Struct Reference}
+\label{structserver__s}\index{server\_s@{server\_s}}
+
+
+Structure representing a game server. This structure contains the necessary information for managing a game server.  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+
+
+Collaboration diagram for server\+\_\+s\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structserver__s_ae148842c5e936a1abdc5c4f587677467}\label{structserver__s_ae148842c5e936a1abdc5c4f587677467}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries client\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{structserver__s_a5adb58945891d3c6e7f8a086994dba55}\label{structserver__s_a5adb58945891d3c6e7f8a086994dba55}} 
+pthread\+\_\+t {\bfseries thread\+\_\+game}
+\item 
+\mbox{\Hypertarget{structserver__s_a6129acbc6b313f77efeb488754f559ec}\label{structserver__s_a6129acbc6b313f77efeb488754f559ec}} 
+int {\bfseries fd}
+\item 
+\mbox{\Hypertarget{structserver__s_a12d8b2dc3f293c1b51bada1936670120}\label{structserver__s_a12d8b2dc3f293c1b51bada1936670120}} 
+int {\bfseries max\+\_\+fd}
+\item 
+\mbox{\Hypertarget{structserver__s_a8e7507e754c443711b570cad41147100}\label{structserver__s_a8e7507e754c443711b570cad41147100}} 
+int {\bfseries port}
+\item 
+\mbox{\Hypertarget{structserver__s_a11d2d6f79835921a447ad537c137130b}\label{structserver__s_a11d2d6f79835921a447ad537c137130b}} 
+char $\ast$ {\bfseries buffer}
+\item 
+\mbox{\Hypertarget{structserver__s_abe180d02b3548974044a0b41d8caf742}\label{structserver__s_abe180d02b3548974044a0b41d8caf742}} 
+unsigned int {\bfseries len\+\_\+server}
+\item 
+\mbox{\Hypertarget{structserver__s_a123f4ef9a1d5cea5d5aa93578cba20f7}\label{structserver__s_a123f4ef9a1d5cea5d5aa93578cba20f7}} 
+float {\bfseries freq}
+\item 
+\mbox{\Hypertarget{structserver__s_a233c1399bddfeaca2a2b7b3f987fe057}\label{structserver__s_a233c1399bddfeaca2a2b7b3f987fe057}} 
+int {\bfseries nb\+\_\+teams}
+\item 
+\mbox{\Hypertarget{structserver__s_a0dda4726469f12b7a040960980986f8e}\label{structserver__s_a0dda4726469f12b7a040960980986f8e}} 
+int {\bfseries nb\+\_\+clients}
+\item 
+\mbox{\Hypertarget{structserver__s_afe4a366403ff1ad530e779f7ccef78ca}\label{structserver__s_afe4a366403ff1ad530e779f7ccef78ca}} 
+int {\bfseries id\+\_\+client}
+\item 
+\mbox{\Hypertarget{structserver__s_a4a2d058ca8c2b93b68d6f51aa5d4dcae}\label{structserver__s_a4a2d058ca8c2b93b68d6f51aa5d4dcae}} 
+int {\bfseries id\+\_\+egg}
+\item 
+\mbox{\Hypertarget{structserver__s_ab16c42d894eaeecfa11ce89a0f8c923d}\label{structserver__s_ab16c42d894eaeecfa11ce89a0f8c923d}} 
+\mbox{\hyperlink{structgame__s}{game\+\_\+t}} $\ast$ {\bfseries game}
+\item 
+\mbox{\Hypertarget{structserver__s_a1242450ec2c5b2f1eed3bae555e6926f}\label{structserver__s_a1242450ec2c5b2f1eed3bae555e6926f}} 
+\mbox{\hyperlink{structclient__s}{client\+\_\+t}} $\ast$ {\bfseries gui}
+\item 
+\mbox{\Hypertarget{structserver__s_a44bb3e5e860bf4c229b3a1f380b856b7}\label{structserver__s_a44bb3e5e860bf4c229b3a1f380b856b7}} 
+\mbox{\hyperlink{structclient__s}{client\+\_\+t}} $\ast$ {\bfseries clients}
+\item 
+\mbox{\Hypertarget{structserver__s_a155300ed3dee73751f8ec766831186e4}\label{structserver__s_a155300ed3dee73751f8ec766831186e4}} 
+\mbox{\hyperlink{structegg__s}{egg\+\_\+t}} $\ast$ {\bfseries eggs}
+\item 
+\mbox{\Hypertarget{structserver__s_aa740b5c0834b3507c7af71930ebfda10}\label{structserver__s_aa740b5c0834b3507c7af71930ebfda10}} 
+\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$ {\bfseries map}
+\item 
+\mbox{\Hypertarget{structserver__s_a706cb849b3c5de7c82925d42bd1c6077}\label{structserver__s_a706cb849b3c5de7c82925d42bd1c6077}} 
+\mbox{\hyperlink{structteam__s}{team\+\_\+t}} $\ast$$\ast$ {\bfseries teams}
+\item 
+\mbox{\Hypertarget{structserver__s_a8cabc7cbecbf940a2c4338c9e9345a31}\label{structserver__s_a8cabc7cbecbf940a2c4338c9e9345a31}} 
+fd\+\_\+set {\bfseries readfds}
+\item 
+\mbox{\Hypertarget{structserver__s_a0ee7f534c5b73e6825beca5f958d59c0}\label{structserver__s_a0ee7f534c5b73e6825beca5f958d59c0}} 
+struct sockaddr\+\_\+in {\bfseries address}
+\item 
+\mbox{\Hypertarget{structserver__s_aa95c741b4e6a7af59f12eda7b5493427}\label{structserver__s_aa95c741b4e6a7af59f12eda7b5493427}} 
+struct timeval {\bfseries tv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a game server. This structure contains the necessary information for managing a game server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+\_\+mutex} & Mutex for concurrent client management. \\
+\hline
+{\em thread\+\_\+game} & Game thread. \\
+\hline
+{\em fd} & File descriptor for the server socket. \\
+\hline
+{\em max\+\_\+fd} & Maximum file descriptor for connection monitoring. \\
+\hline
+{\em port} & Port used by the server. \\
+\hline
+{\em buffer} & Read/write buffer. \\
+\hline
+{\em len\+\_\+server} & Length of the server. \\
+\hline
+{\em freq} & Game refresh frequency. \\
+\hline
+{\em nb\+\_\+teams} & Number of teams. \\
+\hline
+{\em nb\+\_\+clients} & Number of connected clients. \\
+\hline
+{\em id\+\_\+client} & ID of the next client to connect. \\
+\hline
+{\em id\+\_\+egg} & ID of the next egg to create. \\
+\hline
+{\em game} & Pointer to the game structure (see description below). \\
+\hline
+{\em gui} & Pointer to the GUI client (graphical interface). \\
+\hline
+{\em clients} & Array of connected clients. \\
+\hline
+{\em eggs} & Array of eggs present on the map. \\
+\hline
+{\em map} & Pointer to the map structure. \\
+\hline
+{\em teams} & Array of teams. \\
+\hline
+{\em readfds} & Set of file descriptors for reading. \\
+\hline
+{\em address} & Address structure for the server. \\
+\hline
+{\em tv} & Time structure for select(). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+server/include/server.\+h\end{DoxyCompactItemize}

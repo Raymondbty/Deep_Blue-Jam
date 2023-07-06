@@ -1,0 +1,15 @@
+digraph "jar_mod_context_t"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="jar_mod_context_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" channels" ,fontname="Helvetica"];
+  Node2 [label="channel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structchannel.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" patterndata" ,fontname="Helvetica"];
+  Node3 [label="note",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structnote.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" song" ,fontname="Helvetica"];
+  Node4 [label="module",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmodule.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" samples" ,fontname="Helvetica"];
+  Node5 [label="sample",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsample.html",tooltip=" "];
+}

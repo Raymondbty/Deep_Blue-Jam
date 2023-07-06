@@ -1,0 +1,37 @@
+digraph "AudioStream"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="AudioStream",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" processor" ,fontname="Helvetica"];
+  Node2 [label="rAudioProcessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrAudioProcessor.html",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\nprev" ,fontname="Helvetica"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buffer" ,fontname="Helvetica"];
+  Node3 [label="rAudioBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structrAudioBuffer.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" processor" ,fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" converter" ,fontname="Helvetica"];
+  Node4 [label="ma_data_converter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__data__converter.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" resampler" ,fontname="Helvetica"];
+  Node5 [label="ma_resampler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__resampler.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pBackendVTable" ,fontname="Helvetica"];
+  Node6 [label="ma_resampling_backend\l_vtable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__resampling__backend__vtable.html",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" linear" ,fontname="Helvetica"];
+  Node7 [label="ma_linear_resampler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__linear__resampler.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lpf" ,fontname="Helvetica"];
+  Node8 [label="ma_lpf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__lpf.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pLPF1" ,fontname="Helvetica"];
+  Node9 [label="ma_lpf1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__lpf1.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" a\npR1" ,fontname="Helvetica"];
+  Node10 [label="ma_biquad_coefficient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionma__biquad__coefficient.html",tooltip=" "];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pLPF2" ,fontname="Helvetica"];
+  Node11 [label="ma_lpf2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__lpf2.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bq" ,fontname="Helvetica"];
+  Node12 [label="ma_biquad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__biquad.html",tooltip=" "];
+  Node10 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" a1\na2\nb0\nb1\nb2\npR1\npR2" ,fontname="Helvetica"];
+  Node13 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" config" ,fontname="Helvetica"];
+  Node13 [label="ma_linear_resampler\l_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__linear__resampler__config.html",tooltip=" "];
+  Node14 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" channelConverter" ,fontname="Helvetica"];
+  Node14 [label="ma_channel_converter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__channel__converter.html",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next\nprev" ,fontname="Helvetica"];
+}

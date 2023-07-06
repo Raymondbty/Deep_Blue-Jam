@@ -1,0 +1,127 @@
+Projet De Fin d\textquotesingle{}Année à Epitech Paris 2e Année PGE
+
+Ce projet a été réalisé dans le cadre du projet final de la 2ème année du cursus PGE à Epitech Paris.
+
+Participants\+:
+\begin{DoxyItemize}
+\item Louis De-\/\+Macedo
+\item Amaury Bariety
+\item Guillaume Clement Bonniel Veyron
+\item Malek Gatoufi
+\item Nicolas Poupon
+\item Theo Villemer
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md107}{}\doxysection{Sujet}\label{md_README_autotoc_md107}
+\hypertarget{md_README_autotoc_md108}{}\doxysubsection{Introduction}\label{md_README_autotoc_md108}
+Le projet ZAPPY consiste à développer un jeu en réseau simulant un environnement dans lequel des habitants IA en équipes appelés \char`\"{}\+Trantoriens\char`\"{} interagissent pour se nourrir et collecter des pierres pour évoluer sur une carte plane quadrillée. Les IA se battent ou coopérent pour survire. La première équipe avec 6 joueurs à l\textquotesingle{}évolution maximale l\textquotesingle{}emporte.\hypertarget{md_README_autotoc_md109}{}\doxysubsection{Objectifs}\label{md_README_autotoc_md109}
+Les objectifs du projet sont les suivants \+:
+
+
+\begin{DoxyItemize}
+\item Implémenter un serveur qui gère la logique du jeu et la communication entre les clients.
+\item Développer un client graphique permettant aux joueurs d\textquotesingle{}interagir avec le serveur et de visualiser l\textquotesingle{}environnement de jeu.
+\item Mettre en place une architecture réseau robuste et efficace pour assurer la fluidité du jeu en temps réel.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md110}{}\doxysubsection{Activités}\label{md_README_autotoc_md110}
+Les habitants de Trantor se préoccupent principalement de deux activités \+:
+
+
+\begin{DoxyItemize}
+\item Se nourrir \+: Les Trantoriens ont besoin de collecter de la nourriture pour survivre. Chaque unité de nourriture leur permet de vivre pendant X secondes.
+\item Collecter des pierres \+: Les Trantoriens doivent collecter des pierres pour effectuer le rituel d\textquotesingle{}élévation et gagner en niveau.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md111}{}\doxysubsection{Individus}\label{md_README_autotoc_md111}
+Les habitants de Trantor sont des êtres sans corps, flous et pacifistes. Ils occupent la totalité de la tuile dans laquelle ils se trouvent et se déplacent joyeusement à la recherche de nourriture et de pierres. Les Trantoriens peuvent rencontrer facilement d\textquotesingle{}autres habitants sur la même tuile, mais il est impossible de distinguer leur direction lorsqu\textquotesingle{}ils se rencontrent. Les Trantoriens se reproduisent et peuvent ainsi se dupliquer.\hypertarget{md_README_autotoc_md112}{}\doxysubsection{Ressources}\label{md_README_autotoc_md112}
+Il existe 2 types de ressources \+: Les pierres et la nourriture. La nourriture permet aux Trantoriens de survivre, les pierres sont nécessaires à l\textquotesingle{}évolution. Un trantorien en fonction du nombre de joueur sur la carte a besoin d\textquotesingle{}un plus ou moins grand nombre de pierres. Les pierres sont au nombre de 6 \+:
+
+
+\begin{DoxyItemize}
+\item Linemate
+\item Deraumere
+\item Sibur
+\item Mendiane
+\item Phiras
+\item Thystame
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md113}{}\doxysubsection{Le rituel d\textquotesingle{}élévation}\label{md_README_autotoc_md113}
+Le rituel d\textquotesingle{}élévation est le but ultime des Trantoriens. Chaque nouvelle élévation demande plus de pierres. Pour effectuer ce rituel, ils doivent rassembler les éléments suivants sur la même tuile \+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{8}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Élévation   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Nb de joueurs   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Linemate   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Deraumere   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Sibur   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Mendiane   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Phiras   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Thystame    }\\\cline{1-8}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Élévation   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Nb de joueurs   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Linemate   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Deraumere   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Sibur   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Mendiane   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Phiras   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Thystame    }\\\cline{1-8}
+\endhead
+1-\/$>$2   &1   &1   &0   &0   &0   &0   &0    \\\cline{1-8}
+2-\/$>$3   &2   &1   &1   &1   &0   &0   &0    \\\cline{1-8}
+3-\/$>$4   &2   &2   &0   &1   &0   &2   &0    \\\cline{1-8}
+4-\/$>$5   &4   &1   &1   &2   &0   &1   &0    \\\cline{1-8}
+5-\/$>$6   &4   &1   &2   &1   &3   &0   &0    \\\cline{1-8}
+6-\/$>$7   &6   &1   &2   &3   &0   &1   &0    \\\cline{1-8}
+7-\/$>$8   &6   &2   &2   &2   &2   &2   &1   \\\cline{1-8}
+\end{longtabu}
+
+
+La première équipe qui possède au moins 6 joueurs de niveau 8 gagne la partie.\hypertarget{md_README_autotoc_md114}{}\doxysubsection{Vision}\label{md_README_autotoc_md114}
+La vision des joueurs est limitée. À chaque élévation, la vision s\textquotesingle{}étend d\textquotesingle{}une unité vers l\textquotesingle{}avant et d\textquotesingle{}une unité de chaque côté de la nouvelle ligne. Au premier niveau, un personnage est définie à valeure \char`\"{}1\char`\"{}. Les joueurs peuvent utiliser la commande \char`\"{}look\char`\"{} pour explorer leur environnement et recevoir une liste des objets présents sur chaque tuile.\hypertarget{md_README_autotoc_md115}{}\doxysubsection{Exécution du programme}\label{md_README_autotoc_md115}
+Le projet nécessite la création de trois binaires \+:
+
+
+\begin{DoxyItemize}
+\item Serveur \+: Un serveur développé en langage C qui génère le monde du jeu.
+\item Client graphique \+: Un client graphique développé en C++ pour observer ce qui se passe dans le monde.
+\item Client AI \+: Un client autonome développé en Python, permettant de contrôler les personnage directement en envoyant des commandes au serveur.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md116}{}\doxysubsection{Commandes du joueur}\label{md_README_autotoc_md116}
+Chaque joueur peut répondre aux actions suivantes \+: \begin{DoxyVerb}Move : Déplacer le joueur d'une tuile vers l'avant.
+Turn : Tourner le joueur de 90 degrés à droite ou à gauche.
+Look : Obtenir la liste des objets présents sur les tuiles environnantes.
+Inventory : Afficher l'inventaire du joueur, indiquant les quantités d'objets qu'il possède.
+Broadcast : Émettre un message pour tous les joueurs.
+Connect_nbr : Obtenir le nombre de slots disponibles dans l'équipe.
+Fork : Reproduire le joueur en créant un nouvel œuf.
+Eject : Éjecter les joueurs présents sur la même tuile.
+Take : Ramasser un objet présent sur la tuile.
+Set : Déposer un objet sur la tuile.
+Incantation : Lancer une élévation pour passer au niveau supérieur.
+\end{DoxyVerb}
+ Les commandes sont transmises au serveur sous forme de chaînes de caractères se terminant par un saut de ligne. Si une commande est incorrecte ou inconnue, le serveur répondra par \char`\"{}ko\char`\"{}.
+
+
+\begin{DoxyItemize}
+\item Voir protocole GUI dans \char`\"{}/docs/\char`\"{}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md117}{}\doxysubsection{Communication client-\/serveur}\label{md_README_autotoc_md117}
+La communication entre le client AI et le serveur s\textquotesingle{}effectue via des sockets TCP. Le client envoie ses requêtes au serveur, qui renvoie un message confirmant l\textquotesingle{}exécution correcte de la commande ou un message d\textquotesingle{}erreur en cas d\textquotesingle{}échec.\hypertarget{md_README_autotoc_md118}{}\doxysubsection{Communication}\label{md_README_autotoc_md118}
+La communication entre le serveur et les clients ainsi qu\textquotesingle{}entre les clients eux-\/mêmes se fait via le protocole TCP/\+IP. Différents messages sont échangés pour permettre le déroulement du jeu, tels que la connexion d\textquotesingle{}un client au serveur, les mouvements des joueurs, les collectes de ressources, etc.\hypertarget{md_README_autotoc_md119}{}\doxysubsection{Serveur}\label{md_README_autotoc_md119}
+Le serveur est le principal composant du projet. Il gère la logique du jeu, la gestion des connexions et des déconnexions des clients, ainsi que la communication entre les clients. Le serveur maintient une visualisation graphique de l\textquotesingle{}état du jeu, comprenant la position des joueurs, les ressources disponibles, etc.\hypertarget{md_README_autotoc_md120}{}\doxysubsection{Client}\label{md_README_autotoc_md120}
+Le client est l\textquotesingle{}interface graphique permettant aux joueurs d\textquotesingle{}interagir avec le serveur. Il affiche l\textquotesingle{}environnement de jeu et permet aux joueurs de se déplacer, de collecter des ressources, de communiquer avec les autres joueurs, etc.\hypertarget{md_README_autotoc_md121}{}\doxysubsection{COMMANDE DE TEST}\label{md_README_autotoc_md121}
+Ici les commandes de test pour lancer le projet, ce dans 2 terminaux séparés\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./zappy\_gui -\/p 55555 -\/h 127.0.0.1}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./zappy\_server -\/p 55555 -\/x 15 -\/y 20 -\/n name1 name2 name3 -\/c 5 -\/f 300}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md122}{}\doxysubsection{Norme de Commits}\label{md_README_autotoc_md122}
+En envoyant nos projets sur Github, nous avons respecté une certaine norme pour chaque envoit. Ci-\/dessous leur signification \+:
+
+
+\begin{DoxyItemize}
+\item \mbox{[}ADD\mbox{]} \+: Ajout d\textquotesingle{}un nouveau fichier ou feature
+\item \mbox{[}FIX\mbox{]} \+: Correction d\textquotesingle{}une erreur, de \char`\"{}coding style\char`\"{} (apparence du code, intendation)
+\item \mbox{[}DOC\mbox{]} \+: Ajout ou update lié à la documentation
+\item \mbox{[}DEL/\+RM\mbox{]} \+: Supression d\textquotesingle{}un élément quel qu\textquotesingle{}il soit
+\item \mbox{[}UPD\mbox{]} \+: Mise à jour d\textquotesingle{}un ou plusieur fichiers
+\item \mbox{[}REBASE\mbox{]} \+: Rebase
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md123}{}\doxysubsection{Conclusion du projet}\label{md_README_autotoc_md123}
+
+\begin{DoxyItemize}
+\item Note \+: /////
+\item Bilan \+: ////// 
+\end{DoxyItemize}

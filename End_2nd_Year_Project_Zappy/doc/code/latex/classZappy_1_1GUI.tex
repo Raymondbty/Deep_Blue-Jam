@@ -1,0 +1,1170 @@
+\hypertarget{classZappy_1_1GUI}{}\doxysection{Zappy\+::GUI Class Reference}
+\label{classZappy_1_1GUI}\index{Zappy::GUI@{Zappy::GUI}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_ad50860d9f5efb97389aa2dfa4978c402}\label{classZappy_1_1GUI_ad50860d9f5efb97389aa2dfa4978c402}} 
+void {\bfseries set\+Map\+Size} (int x, int y)
+\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a96a3b29adf2251cf5b388f82bb6d1668}{set\+Tile\+Content}} (int x, int y, int food, int linemate, int deraumere, int sibur, int mendiane, int phiras, int thystame)
+\begin{DoxyCompactList}\small\item\em Set the content of a tile on the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ad67040fe3550884a77b835a007b99198}{add\+Team}} (const std\+::string team\+Name)
+\begin{DoxyCompactList}\small\item\em Add a team to the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_abb1440d6a954e1c0c61bb508308dbf65}{move\+Player}} (int id, int x, int y, int rotation)
+\begin{DoxyCompactList}\small\item\em Move a player to a new position on the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a58c546cfef5d5eea29b8750ea8a28a92}{rotate\+Player}} (int id, int direction)
+\begin{DoxyCompactList}\small\item\em Rotate a player to a new direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ac9d3fdd9ac62fc47e94b84c645f148e6}{pick\+Up\+Resources}} (int id, const std\+::vector$<$ Tile\+Content $>$ \&resources)
+\begin{DoxyCompactList}\small\item\em Pick up resources from a tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ad7d428fec4968c3a387237991dcc2e85}{add\+Player}} (int id, int x, int y, int direction, int level, std\+::string team\+Name)
+\begin{DoxyCompactList}\small\item\em Add a new player to the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a6137addbf8eb8dd98e28910c0c6829e1}{set\+Player\+Pos}} (int id, int x, int y, int direction)
+\begin{DoxyCompactList}\small\item\em Set the position and direction of a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a5690064e182dbbd7ec8f130a0424e6fb}{set\+Player\+Level}} (int id, int level)
+\begin{DoxyCompactList}\small\item\em Set the level of a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a8e77bc80dd388cce5368ca49af12c58b}{set\+Player\+Inventory}} (int id, int x, int y, int food, int linemate, int deraumere, int sibur, int mendiane, int phiras, int thystame)
+\begin{DoxyCompactList}\small\item\em Set the inventory of a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a9bfbec8c11c0a631ce1a99b17de67a98}{player\+Expulse}} (int id)
+\begin{DoxyCompactList}\small\item\em Expulse a player from their current position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a3cf8f479d9853dc8360d82ac0c70a470}{player\+Incantation\+Start}} (int x, int y, int level, int id,...)
+\begin{DoxyCompactList}\small\item\em Start an incantation at a given position and level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a620c7beb108f029aaf42f03745118974}{player\+Incantation\+End}} (int x, int y, int result)
+\begin{DoxyCompactList}\small\item\em End an incantation at a given position with a result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_acdfcb279393eeedce32f6b8b824fff62}{player\+Fork}} (int id)
+\begin{DoxyCompactList}\small\item\em Make a player fork (create a new player). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a30d5551db4feaa0d7a21e859010d7c34}{player\+Ressource\+Drop}} (int id, int resource)
+\begin{DoxyCompactList}\small\item\em Make a player drop a resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ab04ce50c703a6043274ace1963fbeb2a}{player\+Ressource\+Take}} (int id, int resource)
+\begin{DoxyCompactList}\small\item\em Make a player take a resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a6d80bd9da0c683a322b1969aaacca033}{player\+Ritual\+End}} (int id, int result)
+\begin{DoxyCompactList}\small\item\em End a player\textquotesingle{}s ritual with a result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a76708d6b4f4fb686f67e9b6750351f97}{player\+Ritual\+Start}} (int id)
+\begin{DoxyCompactList}\small\item\em Start a player\textquotesingle{}s ritual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ad671cc5510ee0977cee6659beb4c3c20}{player\+Death}} (int id)
+\begin{DoxyCompactList}\small\item\em Handle the death of a player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_aebec8b4c7b7b16c376edc7215e6b2641}{player\+Egg\+Lay}} (int egg\+\_\+id, int id, int x, int y)
+\begin{DoxyCompactList}\small\item\em Make a player lay an egg at a given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a25a7e01ed9183a86da9db1bf1612d2aa}{egg\+Hatch}} (int egg\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Hatch an egg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a386116586d7e9e9f12f5ef88cff43041}{egg\+Death}} (int egg\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Handle the death of an egg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a71f756e9e960c43da23faabcea6ded5c}{server\+Time\+Unit}} (int time\+Unit)
+\begin{DoxyCompactList}\small\item\em Set the time unit of the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a4eb967e6d0ddaedecef14955edf7d3a0}{server\+Time\+Unit\+Change}} (int time\+Unit)
+\begin{DoxyCompactList}\small\item\em Change the time unit of the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_aabf574adc33a220b0355973342f558b3}{server\+End\+Game}} (std\+::string team\+Name)
+\begin{DoxyCompactList}\small\item\em End the game on the server with a winning team. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a6a17821e8622f510aa823db8eccefdeb}{server\+Message}} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Display a server message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_ae8e2cc4920a022898b88213ddf86c38b}\label{classZappy_1_1GUI_ae8e2cc4920a022898b88213ddf86c38b}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_ae8e2cc4920a022898b88213ddf86c38b}{server\+Unknown\+Command}} (void)
+\begin{DoxyCompactList}\small\item\em Handle an unknown command received from the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a07b2d16fb9a06b535abd632bfd2e5f96}\label{classZappy_1_1GUI_a07b2d16fb9a06b535abd632bfd2e5f96}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a07b2d16fb9a06b535abd632bfd2e5f96}{server\+Bad\+Parameters}} (void)
+\begin{DoxyCompactList}\small\item\em Handle a command with bad parameters received from the server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCamera}{Camera}} \mbox{\hyperlink{classZappy_1_1GUI_a350b5e631f1f1ebf6edfb35c09c69265}{create\+Camera}} (void)
+\begin{DoxyCompactList}\small\item\em Create a camera for the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a62fa8f5e2e69b3d490896830539744ed}{camera\+Control}} (\mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\begin{DoxyCompactList}\small\item\em Control the camera movement and rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structModel}{Model}} \mbox{\hyperlink{classZappy_1_1GUI_acf9021eed2dc094c0d14032c66eedd1c}{create\+Model}} (std\+::string model, std\+::string texture)
+\begin{DoxyCompactList}\small\item\em Create a model with the specified 3D model file and texture file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a897206fc1f90ddf2afc73d5a95181d94}{remove\+Item}} (int x, int y, Tile\+Content item)
+\begin{DoxyCompactList}\small\item\em Remove an item from the specified tile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a2098495c6da236536cd24374a76b6c3d}\label{classZappy_1_1GUI_a2098495c6da236536cd24374a76b6c3d}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a2098495c6da236536cd24374a76b6c3d}{draw\+Models}} (void)
+\begin{DoxyCompactList}\small\item\em Draw all the models in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a7c39c9012ddb4c7eb7266f99394f339b}\label{classZappy_1_1GUI_a7c39c9012ddb4c7eb7266f99394f339b}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a7c39c9012ddb4c7eb7266f99394f339b}{draw\+Map}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the map in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_ad0a942e569c5d9f293edc3087e96a64c}\label{classZappy_1_1GUI_ad0a942e569c5d9f293edc3087e96a64c}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_ad0a942e569c5d9f293edc3087e96a64c}{draw\+Eggs}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the eggs in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_ae7df9a986e6925d0d43f9112cbb764ae}\label{classZappy_1_1GUI_ae7df9a986e6925d0d43f9112cbb764ae}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_ae7df9a986e6925d0d43f9112cbb764ae}{draw\+Players}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the players in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structZappy_1_1Player}{Player}} $\ast$ $>$ \mbox{\hyperlink{classZappy_1_1GUI_a55abfb83f84e7b912bbfcfa7ef48b68d}{get\+Players}} (void)
+\begin{DoxyCompactList}\small\item\em Get a vector of pointers to the players in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a235e9ef335f97988efaeb08dc4d56360}{win\+Animation}} (const std\+::string \&team\+Name)
+\begin{DoxyCompactList}\small\item\em Perform a win animation for the specified team. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a1c7ce542334280313adeae26500abb51}{player\+Lay\+Egg}} (int id)
+\begin{DoxyCompactList}\small\item\em Perform the animation of a player laying an egg. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_acc073bb24230fc0b4befbf1f8167296e}{player\+Expulsion\+Animation}} (int id)
+\begin{DoxyCompactList}\small\item\em Perform the animation of a player being expelled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_afca7bcd37dc77440d6fb0779cbcae21a}{egg\+Hatch\+Animation}} (int id)
+\begin{DoxyCompactList}\small\item\em Perform the animation of an egg hatching. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a34f13bac4ab300411901fb4feb109078}\label{classZappy_1_1GUI_a34f13bac4ab300411901fb4feb109078}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a34f13bac4ab300411901fb4feb109078}{animate\+Models}} (void)
+\begin{DoxyCompactList}\small\item\em Animate the models in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_ae97da921c72fd40fc70a12d4c4cd17d4}\label{classZappy_1_1GUI_ae97da921c72fd40fc70a12d4c4cd17d4}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_ae97da921c72fd40fc70a12d4c4cd17d4}{animate\+Water}} (void)
+\begin{DoxyCompactList}\small\item\em Animate the water in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a53431f66f6707dd7026b5f1d3c880131}\label{classZappy_1_1GUI_a53431f66f6707dd7026b5f1d3c880131}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a53431f66f6707dd7026b5f1d3c880131}{animate\+Players}} (void)
+\begin{DoxyCompactList}\small\item\em Animate the players in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_af8f82ad29776bda13c2967a995df30e5}{set\+Rotation}} (int rotation)
+\begin{DoxyCompactList}\small\item\em Set the rotation value for the models. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classZappy_1_1GUI_a423990ca210c4357acc6f327a6ec5962}{get\+Rotation}} (void)
+\begin{DoxyCompactList}\small\item\em Get the rotation value for the models. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a25e6217fc6e2ed229e4bb0d1242aa340}\label{classZappy_1_1GUI_a25e6217fc6e2ed229e4bb0d1242aa340}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a25e6217fc6e2ed229e4bb0d1242aa340}{draw\+UI}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the user interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a9fc6c0378cf1a187220c9506675e4e72}\label{classZappy_1_1GUI_a9fc6c0378cf1a187220c9506675e4e72}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a9fc6c0378cf1a187220c9506675e4e72}{draw\+Teams}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the teams in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_aaa0516def5fb03319419f1c74d9330d6}{draw\+Broadcast}} (\mbox{\hyperlink{structCamera}{Camera}} camera)
+\begin{DoxyCompactList}\small\item\em Draw the broadcast message on the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}} using the specified camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_ac79051105aac44c79a244c4f3b5b1dc8}\label{classZappy_1_1GUI_ac79051105aac44c79a244c4f3b5b1dc8}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_ac79051105aac44c79a244c4f3b5b1dc8}{draw\+Menu}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the menu in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a23ae26ed3a0f53139cacbb721474ff82}{handle\+Menu\+Selection}} (int \mbox{\hyperlink{structoption}{option}})
+\begin{DoxyCompactList}\small\item\em Makes menu iptions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a4bd7946cadcb9424c25c22e5d0b6b69b}\label{classZappy_1_1GUI_a4bd7946cadcb9424c25c22e5d0b6b69b}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a4bd7946cadcb9424c25c22e5d0b6b69b}{show\+About}} ()
+\begin{DoxyCompactList}\small\item\em show infos about \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_aebac59cd6284e02d0f1986e70bb8fe5a}{set\+Time\+Option}} (int \&time\+Value)
+\begin{DoxyCompactList}\small\item\em Set the Time Option from menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a13e9670740193ca289b054c15f4497e2}{set\+Broadcast\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Set the broadcast ID for the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a57c1f7161e99ad64e37e06ed56cc91d6}{set\+Broadcast\+Message}} (std\+::string text)
+\begin{DoxyCompactList}\small\item\em Set the broadcast message to be displayed on the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structRayCollision}{Ray\+Collision}} \mbox{\hyperlink{classZappy_1_1GUI_a20497954cf83abd8c8dcee7ad5d1dd97}{mouse\+Collision}} (\mbox{\hyperlink{structRayCollision}{Ray\+Collision}} collision)
+\begin{DoxyCompactList}\small\item\em Perform mouse collision detection and return the result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_af48ee500972cfffbf6e4647fc8cdd9da}\label{classZappy_1_1GUI_af48ee500972cfffbf6e4647fc8cdd9da}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_af48ee500972cfffbf6e4647fc8cdd9da}{draw\+Selected\+Tile}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the selected tile in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a0948c391b198ddd199ee565230f45792}{draw\+Player\+Inventory}} (int id, int x, int y)
+\begin{DoxyCompactList}\small\item\em Draw the inventory of the player with the specified ID at the given position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structclient__s}{client\+\_\+t}} \mbox{\hyperlink{classZappy_1_1GUI_a59d13208fd2956fb18132c1b3ecf757c}{get\+Client}} (void)
+\begin{DoxyCompactList}\small\item\em Get the client information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ab38c0545884a181ce16ca89a5deeb189}{set\+Client}} (\mbox{\hyperlink{structclient__s}{client\+\_\+t}} client)
+\begin{DoxyCompactList}\small\item\em Set the client information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a68812dcf985b634d2910661dd4aea7c7}{send\+Command}} (\mbox{\hyperlink{structclient__s}{client\+\_\+t}} client, std\+::string command)
+\begin{DoxyCompactList}\small\item\em Send a command to the specified client. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classZappy_1_1GUI_add6a8189d1bcb39cc3e220ccbe420582}{get\+Is\+Running}} (void)
+\begin{DoxyCompactList}\small\item\em Check if the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}} is currently running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a0cd2c6508be3614068a024416469a688}{get\+Map\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em Get the size of the map from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a1545f1181dca71aae0d5bc142bb6466f}{get\+Tile\+Content}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Get the content of a specific tile from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a766e06b2fa98a5b1cfb25a42b9ec9735}{get\+All\+Tile\+Content}} (void)
+\begin{DoxyCompactList}\small\item\em Get the content of all tiles from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a76cfa6f312be0a8f74624a66951a6d23}{get\+Teams}} (void)
+\begin{DoxyCompactList}\small\item\em Get the list of teams from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a715dd33b0945544a77d009336c9af071}{get\+Player\+Pos}} (int id)
+\begin{DoxyCompactList}\small\item\em Get the position of a player from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a2d526f311ff498770436ac709eef4be3}{get\+Player\+Level}} (int id)
+\begin{DoxyCompactList}\small\item\em Get the level of a player from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a740451fd6506101ebd584561f7ee9df9}{get\+Player\+Inventory}} (int id)
+\begin{DoxyCompactList}\small\item\em Get the inventory of a player from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_af23cf9ca87f2f8d6db7e9ed7f43b1b37}{get\+Server\+Time\+Unit}} (const std\+::string \&time\+Value)
+\begin{DoxyCompactList}\small\item\em Get the time unit of the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_af4fed062d986c3813124c860266c8afe}{get\+Server\+Time\+Unit\+Change}} (const std\+::string \&time\+Value)
+\begin{DoxyCompactList}\small\item\em Get the changed time unit of the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a767f315d72d6fd86fa62174c6d41bcbc}\label{classZappy_1_1GUI_a767f315d72d6fd86fa62174c6d41bcbc}} 
+void {\bfseries set\+Network\+Info} (const std\+::string ip, const int port)
+\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a2e12d3923088b348d6c557d77247cb47}{create\+Models\+Struct}} (void)
+\begin{DoxyCompactList}\small\item\em Create the models structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_ad32fc18660633d1ae44ad4185876afca}{create\+Textures\+Struct}} (void)
+\begin{DoxyCompactList}\small\item\em Create the textures structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a760367868121dd125cc753b2a5b5196e}{create\+Season\+Textures}} (void)
+\begin{DoxyCompactList}\small\item\em Create the season textures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classZappy_1_1GUI_a2d39ad9628f44de403264570b026e1aa}{run}} ()
+\begin{DoxyCompactList}\small\item\em Run the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a8bbac740f30e73d798d320ee74981202}\label{classZappy_1_1GUI_a8bbac740f30e73d798d320ee74981202}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a8bbac740f30e73d798d320ee74981202}{init\+\_\+music}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the music. This function initializes the audio device, loads the music stream from the file \char`\"{}assets/music/music\+\_\+ori.\+ogg\char`\"{}, starts playing the music stream, and sets the music volume based on the value stored in the member variable \+\_\+volume. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a17e10668fd9ed2f597bfd23c526eb168}\label{classZappy_1_1GUI_a17e10668fd9ed2f597bfd23c526eb168}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a17e10668fd9ed2f597bfd23c526eb168}{update\+\_\+music}} (void)
+\begin{DoxyCompactList}\small\item\em Update the music. This function updates the music stream, checks for user interaction with the pause button and volume slider, and performs the corresponding actions. If the pause button is clicked, the music stream is paused or resumed depending on its current state. If the volume slider is being dragged, the music volume is adjusted based on the slider\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classZappy_1_1GUI_a8a29063814f0e2065eafe18b1cb19bb4}\label{classZappy_1_1GUI_a8a29063814f0e2065eafe18b1cb19bb4}} 
+void \mbox{\hyperlink{classZappy_1_1GUI_a8a29063814f0e2065eafe18b1cb19bb4}{draw\+\_\+music}} (void)
+\begin{DoxyCompactList}\small\item\em Draw the music UI elements. This function draws the UI elements related to the music, including the pause button, the text indicating the play/stop status, the volume bar, and the volume slider. The color of the pause button is determined based on the current state of the music stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classZappy_1_1GUI_ad7d428fec4968c3a387237991dcc2e85}\label{classZappy_1_1GUI_ad7d428fec4968c3a387237991dcc2e85}} 
+\index{Zappy::GUI@{Zappy::GUI}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::add\+Player (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{direction,  }\item[{int}]{level,  }\item[{std\+::string}]{team\+Name }\end{DoxyParamCaption})}
+
+
+
+Add a new player to the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em x} & The initial x-\/coordinate of the player. \\
+\hline
+{\em y} & The initial y-\/coordinate of the player. \\
+\hline
+{\em direction} & The initial direction of the player. \\
+\hline
+{\em level} & The level of the player. \\
+\hline
+{\em team\+Name} & The name of the team the player belongs to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_ad67040fe3550884a77b835a007b99198}\label{classZappy_1_1GUI_ad67040fe3550884a77b835a007b99198}} 
+\index{Zappy::GUI@{Zappy::GUI}!addTeam@{addTeam}}
+\index{addTeam@{addTeam}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{addTeam()}{addTeam()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::add\+Team (\begin{DoxyParamCaption}\item[{const std\+::string}]{team\+Name }\end{DoxyParamCaption})}
+
+
+
+Add a team to the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em team\+Name} & The name of the team to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a62fa8f5e2e69b3d490896830539744ed}\label{classZappy_1_1GUI_a62fa8f5e2e69b3d490896830539744ed}} 
+\index{Zappy::GUI@{Zappy::GUI}!cameraControl@{cameraControl}}
+\index{cameraControl@{cameraControl}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{cameraControl()}{cameraControl()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::camera\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCamera}{Camera}} \&}]{camera }\end{DoxyParamCaption})}
+
+
+
+Control the camera movement and rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to be controlled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a350b5e631f1f1ebf6edfb35c09c69265}\label{classZappy_1_1GUI_a350b5e631f1f1ebf6edfb35c09c69265}} 
+\index{Zappy::GUI@{Zappy::GUI}!createCamera@{createCamera}}
+\index{createCamera@{createCamera}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{createCamera()}{createCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCamera}{Camera}} Zappy\+::\+GUI\+::create\+Camera (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create a camera for the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. 
+
+\begin{DoxyReturn}{Returns}
+The created camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_acf9021eed2dc094c0d14032c66eedd1c}\label{classZappy_1_1GUI_acf9021eed2dc094c0d14032c66eedd1c}} 
+\index{Zappy::GUI@{Zappy::GUI}!createModel@{createModel}}
+\index{createModel@{createModel}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{createModel()}{createModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structModel}{Model}} Zappy\+::\+GUI\+::create\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{model,  }\item[{std\+::string}]{texture }\end{DoxyParamCaption})}
+
+
+
+Create a model with the specified 3D model file and texture file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The file path of the 3D model. \\
+\hline
+{\em texture} & The file path of the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created model. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_a2e12d3923088b348d6c557d77247cb47}\label{classZappy_1_1GUI_a2e12d3923088b348d6c557d77247cb47}} 
+\index{Zappy::GUI@{Zappy::GUI}!createModelsStruct@{createModelsStruct}}
+\index{createModelsStruct@{createModelsStruct}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{createModelsStruct()}{createModelsStruct()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::create\+Models\+Struct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create the models structure. 
+
+This function creates the necessary models for rendering the game. \mbox{\Hypertarget{classZappy_1_1GUI_a760367868121dd125cc753b2a5b5196e}\label{classZappy_1_1GUI_a760367868121dd125cc753b2a5b5196e}} 
+\index{Zappy::GUI@{Zappy::GUI}!createSeasonTextures@{createSeasonTextures}}
+\index{createSeasonTextures@{createSeasonTextures}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{createSeasonTextures()}{createSeasonTextures()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::create\+Season\+Textures (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create the season textures. 
+
+This function creates the textures for the different seasons. \mbox{\Hypertarget{classZappy_1_1GUI_ad32fc18660633d1ae44ad4185876afca}\label{classZappy_1_1GUI_ad32fc18660633d1ae44ad4185876afca}} 
+\index{Zappy::GUI@{Zappy::GUI}!createTexturesStruct@{createTexturesStruct}}
+\index{createTexturesStruct@{createTexturesStruct}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{createTexturesStruct()}{createTexturesStruct()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::create\+Textures\+Struct (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Create the textures structure. 
+
+This function creates the necessary textures for rendering the game. \mbox{\Hypertarget{classZappy_1_1GUI_aaa0516def5fb03319419f1c74d9330d6}\label{classZappy_1_1GUI_aaa0516def5fb03319419f1c74d9330d6}} 
+\index{Zappy::GUI@{Zappy::GUI}!drawBroadcast@{drawBroadcast}}
+\index{drawBroadcast@{drawBroadcast}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{drawBroadcast()}{drawBroadcast()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::draw\+Broadcast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCamera}{Camera}}}]{camera }\end{DoxyParamCaption})}
+
+
+
+Draw the broadcast message on the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}} using the specified camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to use for drawing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a0948c391b198ddd199ee565230f45792}\label{classZappy_1_1GUI_a0948c391b198ddd199ee565230f45792}} 
+\index{Zappy::GUI@{Zappy::GUI}!drawPlayerInventory@{drawPlayerInventory}}
+\index{drawPlayerInventory@{drawPlayerInventory}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{drawPlayerInventory()}{drawPlayerInventory()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::draw\+Player\+Inventory (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draw the inventory of the player with the specified ID at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em x} & The X position of the player. \\
+\hline
+{\em y} & The Y position of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a386116586d7e9e9f12f5ef88cff43041}\label{classZappy_1_1GUI_a386116586d7e9e9f12f5ef88cff43041}} 
+\index{Zappy::GUI@{Zappy::GUI}!eggDeath@{eggDeath}}
+\index{eggDeath@{eggDeath}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{eggDeath()}{eggDeath()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::egg\+Death (\begin{DoxyParamCaption}\item[{int}]{egg\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Handle the death of an egg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em egg\+\_\+id} & The ID of the egg that died. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a25a7e01ed9183a86da9db1bf1612d2aa}\label{classZappy_1_1GUI_a25a7e01ed9183a86da9db1bf1612d2aa}} 
+\index{Zappy::GUI@{Zappy::GUI}!eggHatch@{eggHatch}}
+\index{eggHatch@{eggHatch}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{eggHatch()}{eggHatch()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::egg\+Hatch (\begin{DoxyParamCaption}\item[{int}]{egg\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Hatch an egg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em egg\+\_\+id} & The ID of the egg to be hatched. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_afca7bcd37dc77440d6fb0779cbcae21a}\label{classZappy_1_1GUI_afca7bcd37dc77440d6fb0779cbcae21a}} 
+\index{Zappy::GUI@{Zappy::GUI}!eggHatchAnimation@{eggHatchAnimation}}
+\index{eggHatchAnimation@{eggHatchAnimation}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{eggHatchAnimation()}{eggHatchAnimation()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::egg\+Hatch\+Animation (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Perform the animation of an egg hatching. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the egg. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a766e06b2fa98a5b1cfb25a42b9ec9735}\label{classZappy_1_1GUI_a766e06b2fa98a5b1cfb25a42b9ec9735}} 
+\index{Zappy::GUI@{Zappy::GUI}!getAllTileContent@{getAllTileContent}}
+\index{getAllTileContent@{getAllTileContent}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getAllTileContent()}{getAllTileContent()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+All\+Tile\+Content (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the content of all tiles from the server. 
+
+Sends the \char`\"{}mct\char`\"{} command to the server. \mbox{\Hypertarget{classZappy_1_1GUI_a59d13208fd2956fb18132c1b3ecf757c}\label{classZappy_1_1GUI_a59d13208fd2956fb18132c1b3ecf757c}} 
+\index{Zappy::GUI@{Zappy::GUI}!getClient@{getClient}}
+\index{getClient@{getClient}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getClient()}{getClient()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structclient__s}{client\+\_\+t}} Zappy\+::\+GUI\+::get\+Client (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the client information. 
+
+\begin{DoxyReturn}{Returns}
+The client information. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_add6a8189d1bcb39cc3e220ccbe420582}\label{classZappy_1_1GUI_add6a8189d1bcb39cc3e220ccbe420582}} 
+\index{Zappy::GUI@{Zappy::GUI}!getIsRunning@{getIsRunning}}
+\index{getIsRunning@{getIsRunning}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getIsRunning()}{getIsRunning()}}
+{\footnotesize\ttfamily bool Zappy\+::\+GUI\+::get\+Is\+Running (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}} is currently running. 
+
+\begin{DoxyReturn}{Returns}
+True if the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}} is running, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_a0cd2c6508be3614068a024416469a688}\label{classZappy_1_1GUI_a0cd2c6508be3614068a024416469a688}} 
+\index{Zappy::GUI@{Zappy::GUI}!getMapSize@{getMapSize}}
+\index{getMapSize@{getMapSize}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getMapSize()}{getMapSize()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Map\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size of the map from the server. 
+
+Sends the \char`\"{}msz\char`\"{} command to the server. \mbox{\Hypertarget{classZappy_1_1GUI_a740451fd6506101ebd584561f7ee9df9}\label{classZappy_1_1GUI_a740451fd6506101ebd584561f7ee9df9}} 
+\index{Zappy::GUI@{Zappy::GUI}!getPlayerInventory@{getPlayerInventory}}
+\index{getPlayerInventory@{getPlayerInventory}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getPlayerInventory()}{getPlayerInventory()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Player\+Inventory (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the inventory of a player from the server. 
+
+Sends the \char`\"{}pin\char`\"{} command with the specified player ID to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a2d526f311ff498770436ac709eef4be3}\label{classZappy_1_1GUI_a2d526f311ff498770436ac709eef4be3}} 
+\index{Zappy::GUI@{Zappy::GUI}!getPlayerLevel@{getPlayerLevel}}
+\index{getPlayerLevel@{getPlayerLevel}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getPlayerLevel()}{getPlayerLevel()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Player\+Level (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the level of a player from the server. 
+
+Sends the \char`\"{}plv\char`\"{} command with the specified player ID to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a715dd33b0945544a77d009336c9af071}\label{classZappy_1_1GUI_a715dd33b0945544a77d009336c9af071}} 
+\index{Zappy::GUI@{Zappy::GUI}!getPlayerPos@{getPlayerPos}}
+\index{getPlayerPos@{getPlayerPos}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getPlayerPos()}{getPlayerPos()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Player\+Pos (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of a player from the server. 
+
+Sends the \char`\"{}ppo\char`\"{} command with the specified player ID to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a55abfb83f84e7b912bbfcfa7ef48b68d}\label{classZappy_1_1GUI_a55abfb83f84e7b912bbfcfa7ef48b68d}} 
+\index{Zappy::GUI@{Zappy::GUI}!getPlayers@{getPlayers}}
+\index{getPlayers@{getPlayers}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getPlayers()}{getPlayers()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structZappy_1_1Player}{Player}}$\ast$$>$ Zappy\+::\+GUI\+::get\+Players (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a vector of pointers to the players in the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. 
+
+\begin{DoxyReturn}{Returns}
+A vector of pointers to the players. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_a423990ca210c4357acc6f327a6ec5962}\label{classZappy_1_1GUI_a423990ca210c4357acc6f327a6ec5962}} 
+\index{Zappy::GUI@{Zappy::GUI}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily int Zappy\+::\+GUI\+::get\+Rotation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the rotation value for the models. 
+
+\begin{DoxyReturn}{Returns}
+The rotation value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_af23cf9ca87f2f8d6db7e9ed7f43b1b37}\label{classZappy_1_1GUI_af23cf9ca87f2f8d6db7e9ed7f43b1b37}} 
+\index{Zappy::GUI@{Zappy::GUI}!getServerTimeUnit@{getServerTimeUnit}}
+\index{getServerTimeUnit@{getServerTimeUnit}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getServerTimeUnit()}{getServerTimeUnit()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Server\+Time\+Unit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{time\+Value }\end{DoxyParamCaption})}
+
+
+
+Get the time unit of the server. 
+
+Sends the \char`\"{}sst\char`\"{} command with the specified time value to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Value} & The time value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_af4fed062d986c3813124c860266c8afe}\label{classZappy_1_1GUI_af4fed062d986c3813124c860266c8afe}} 
+\index{Zappy::GUI@{Zappy::GUI}!getServerTimeUnitChange@{getServerTimeUnitChange}}
+\index{getServerTimeUnitChange@{getServerTimeUnitChange}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getServerTimeUnitChange()}{getServerTimeUnitChange()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Server\+Time\+Unit\+Change (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{time\+Value }\end{DoxyParamCaption})}
+
+
+
+Get the changed time unit of the server. 
+
+Sends the \char`\"{}sgt\char`\"{} command with the specified time value to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Value} & The time value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a76cfa6f312be0a8f74624a66951a6d23}\label{classZappy_1_1GUI_a76cfa6f312be0a8f74624a66951a6d23}} 
+\index{Zappy::GUI@{Zappy::GUI}!getTeams@{getTeams}}
+\index{getTeams@{getTeams}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getTeams()}{getTeams()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Teams (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the list of teams from the server. 
+
+Sends the \char`\"{}tna\char`\"{} command to the server. \mbox{\Hypertarget{classZappy_1_1GUI_a1545f1181dca71aae0d5bc142bb6466f}\label{classZappy_1_1GUI_a1545f1181dca71aae0d5bc142bb6466f}} 
+\index{Zappy::GUI@{Zappy::GUI}!getTileContent@{getTileContent}}
+\index{getTileContent@{getTileContent}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{getTileContent()}{getTileContent()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::get\+Tile\+Content (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the content of a specific tile from the server. 
+
+Sends the \char`\"{}bct\char`\"{} command with the specified coordinates to the server.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the tile. \\
+\hline
+{\em y} & The y-\/coordinate of the tile. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a23ae26ed3a0f53139cacbb721474ff82}\label{classZappy_1_1GUI_a23ae26ed3a0f53139cacbb721474ff82}} 
+\index{Zappy::GUI@{Zappy::GUI}!handleMenuSelection@{handleMenuSelection}}
+\index{handleMenuSelection@{handleMenuSelection}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{handleMenuSelection()}{handleMenuSelection()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::handle\+Menu\+Selection (\begin{DoxyParamCaption}\item[{int}]{option }\end{DoxyParamCaption})}
+
+
+
+Makes menu iptions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a20497954cf83abd8c8dcee7ad5d1dd97}\label{classZappy_1_1GUI_a20497954cf83abd8c8dcee7ad5d1dd97}} 
+\index{Zappy::GUI@{Zappy::GUI}!mouseCollision@{mouseCollision}}
+\index{mouseCollision@{mouseCollision}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{mouseCollision()}{mouseCollision()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRayCollision}{Ray\+Collision}} Zappy\+::\+GUI\+::mouse\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRayCollision}{Ray\+Collision}}}]{collision }\end{DoxyParamCaption})}
+
+
+
+Perform mouse collision detection and return the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & The initial collision data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated collision data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classZappy_1_1GUI_abb1440d6a954e1c0c61bb508308dbf65}\label{classZappy_1_1GUI_abb1440d6a954e1c0c61bb508308dbf65}} 
+\index{Zappy::GUI@{Zappy::GUI}!movePlayer@{movePlayer}}
+\index{movePlayer@{movePlayer}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{movePlayer()}{movePlayer()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::move\+Player (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{rotation }\end{DoxyParamCaption})}
+
+
+
+Move a player to a new position on the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em x} & The new x-\/coordinate of the player. \\
+\hline
+{\em y} & The new y-\/coordinate of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_ac9d3fdd9ac62fc47e94b84c645f148e6}\label{classZappy_1_1GUI_ac9d3fdd9ac62fc47e94b84c645f148e6}} 
+\index{Zappy::GUI@{Zappy::GUI}!pickUpResources@{pickUpResources}}
+\index{pickUpResources@{pickUpResources}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{pickUpResources()}{pickUpResources()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::pick\+Up\+Resources (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{const std\+::vector$<$ Tile\+Content $>$ \&}]{resources }\end{DoxyParamCaption})}
+
+
+
+Pick up resources from a tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em resources} & The vector of resources to pick up. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_ad671cc5510ee0977cee6659beb4c3c20}\label{classZappy_1_1GUI_ad671cc5510ee0977cee6659beb4c3c20}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerDeath@{playerDeath}}
+\index{playerDeath@{playerDeath}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerDeath()}{playerDeath()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Death (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Handle the death of a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player who died. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_aebec8b4c7b7b16c376edc7215e6b2641}\label{classZappy_1_1GUI_aebec8b4c7b7b16c376edc7215e6b2641}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerEggLay@{playerEggLay}}
+\index{playerEggLay@{playerEggLay}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerEggLay()}{playerEggLay()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Egg\+Lay (\begin{DoxyParamCaption}\item[{int}]{egg\+\_\+id,  }\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Make a player lay an egg at a given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em egg\+\_\+id} & The ID of the egg being laid. \\
+\hline
+{\em id} & The ID of the player laying the egg. \\
+\hline
+{\em x} & The x-\/coordinate of the position. \\
+\hline
+{\em y} & The y-\/coordinate of the position. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a9bfbec8c11c0a631ce1a99b17de67a98}\label{classZappy_1_1GUI_a9bfbec8c11c0a631ce1a99b17de67a98}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerExpulse@{playerExpulse}}
+\index{playerExpulse@{playerExpulse}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerExpulse()}{playerExpulse()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Expulse (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Expulse a player from their current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player to be expelled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_acc073bb24230fc0b4befbf1f8167296e}\label{classZappy_1_1GUI_acc073bb24230fc0b4befbf1f8167296e}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerExpulsionAnimation@{playerExpulsionAnimation}}
+\index{playerExpulsionAnimation@{playerExpulsionAnimation}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerExpulsionAnimation()}{playerExpulsionAnimation()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Expulsion\+Animation (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Perform the animation of a player being expelled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_acdfcb279393eeedce32f6b8b824fff62}\label{classZappy_1_1GUI_acdfcb279393eeedce32f6b8b824fff62}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerFork@{playerFork}}
+\index{playerFork@{playerFork}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerFork()}{playerFork()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Fork (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Make a player fork (create a new player). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player forking. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a620c7beb108f029aaf42f03745118974}\label{classZappy_1_1GUI_a620c7beb108f029aaf42f03745118974}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerIncantationEnd@{playerIncantationEnd}}
+\index{playerIncantationEnd@{playerIncantationEnd}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerIncantationEnd()}{playerIncantationEnd()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Incantation\+End (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{result }\end{DoxyParamCaption})}
+
+
+
+End an incantation at a given position with a result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the position. \\
+\hline
+{\em y} & The y-\/coordinate of the position. \\
+\hline
+{\em result} & The result of the incantation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a3cf8f479d9853dc8360d82ac0c70a470}\label{classZappy_1_1GUI_a3cf8f479d9853dc8360d82ac0c70a470}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerIncantationStart@{playerIncantationStart}}
+\index{playerIncantationStart@{playerIncantationStart}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerIncantationStart()}{playerIncantationStart()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Incantation\+Start (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{level,  }\item[{int}]{id,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Start an incantation at a given position and level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the position. \\
+\hline
+{\em y} & The y-\/coordinate of the position. \\
+\hline
+{\em level} & The level of the incantation. \\
+\hline
+{\em id} & The ID of the player initiating the incantation. \\
+\hline
+{\em ...} & Additional player IDs participating in the incantation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a1c7ce542334280313adeae26500abb51}\label{classZappy_1_1GUI_a1c7ce542334280313adeae26500abb51}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerLayEgg@{playerLayEgg}}
+\index{playerLayEgg@{playerLayEgg}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerLayEgg()}{playerLayEgg()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Lay\+Egg (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Perform the animation of a player laying an egg. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a30d5551db4feaa0d7a21e859010d7c34}\label{classZappy_1_1GUI_a30d5551db4feaa0d7a21e859010d7c34}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerRessourceDrop@{playerRessourceDrop}}
+\index{playerRessourceDrop@{playerRessourceDrop}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerRessourceDrop()}{playerRessourceDrop()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Ressource\+Drop (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{resource }\end{DoxyParamCaption})}
+
+
+
+Make a player drop a resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em resource} & The resource to be dropped. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_ab04ce50c703a6043274ace1963fbeb2a}\label{classZappy_1_1GUI_ab04ce50c703a6043274ace1963fbeb2a}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerRessourceTake@{playerRessourceTake}}
+\index{playerRessourceTake@{playerRessourceTake}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerRessourceTake()}{playerRessourceTake()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Ressource\+Take (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{resource }\end{DoxyParamCaption})}
+
+
+
+Make a player take a resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em resource} & The resource to be taken. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a6d80bd9da0c683a322b1969aaacca033}\label{classZappy_1_1GUI_a6d80bd9da0c683a322b1969aaacca033}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerRitualEnd@{playerRitualEnd}}
+\index{playerRitualEnd@{playerRitualEnd}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerRitualEnd()}{playerRitualEnd()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Ritual\+End (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{result }\end{DoxyParamCaption})}
+
+
+
+End a player\textquotesingle{}s ritual with a result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player performing the ritual. \\
+\hline
+{\em result} & The result of the ritual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a76708d6b4f4fb686f67e9b6750351f97}\label{classZappy_1_1GUI_a76708d6b4f4fb686f67e9b6750351f97}} 
+\index{Zappy::GUI@{Zappy::GUI}!playerRitualStart@{playerRitualStart}}
+\index{playerRitualStart@{playerRitualStart}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{playerRitualStart()}{playerRitualStart()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::player\+Ritual\+Start (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Start a player\textquotesingle{}s ritual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player starting the ritual. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a897206fc1f90ddf2afc73d5a95181d94}\label{classZappy_1_1GUI_a897206fc1f90ddf2afc73d5a95181d94}} 
+\index{Zappy::GUI@{Zappy::GUI}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::remove\+Item (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{Tile\+Content}]{item }\end{DoxyParamCaption})}
+
+
+
+Remove an item from the specified tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the tile. \\
+\hline
+{\em y} & The y-\/coordinate of the tile. \\
+\hline
+{\em item} & The item to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a58c546cfef5d5eea29b8750ea8a28a92}\label{classZappy_1_1GUI_a58c546cfef5d5eea29b8750ea8a28a92}} 
+\index{Zappy::GUI@{Zappy::GUI}!rotatePlayer@{rotatePlayer}}
+\index{rotatePlayer@{rotatePlayer}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{rotatePlayer()}{rotatePlayer()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::rotate\+Player (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Rotate a player to a new direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em direction} & The new direction of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a2d39ad9628f44de403264570b026e1aa}\label{classZappy_1_1GUI_a2d39ad9628f44de403264570b026e1aa}} 
+\index{Zappy::GUI@{Zappy::GUI}!run@{run}}
+\index{run@{run}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Run the game. 
+
+This function starts the game loop and handles the main execution of the program. \mbox{\Hypertarget{classZappy_1_1GUI_a68812dcf985b634d2910661dd4aea7c7}\label{classZappy_1_1GUI_a68812dcf985b634d2910661dd4aea7c7}} 
+\index{Zappy::GUI@{Zappy::GUI}!sendCommand@{sendCommand}}
+\index{sendCommand@{sendCommand}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{sendCommand()}{sendCommand()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::send\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structclient__s}{client\+\_\+t}}}]{client,  }\item[{std\+::string}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Send a command to the specified client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The client to send the command to. \\
+\hline
+{\em command} & The command to send. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_aabf574adc33a220b0355973342f558b3}\label{classZappy_1_1GUI_aabf574adc33a220b0355973342f558b3}} 
+\index{Zappy::GUI@{Zappy::GUI}!serverEndGame@{serverEndGame}}
+\index{serverEndGame@{serverEndGame}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{serverEndGame()}{serverEndGame()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::server\+End\+Game (\begin{DoxyParamCaption}\item[{std\+::string}]{team\+Name }\end{DoxyParamCaption})}
+
+
+
+End the game on the server with a winning team. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em team\+Name} & The name of the winning team. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a6a17821e8622f510aa823db8eccefdeb}\label{classZappy_1_1GUI_a6a17821e8622f510aa823db8eccefdeb}} 
+\index{Zappy::GUI@{Zappy::GUI}!serverMessage@{serverMessage}}
+\index{serverMessage@{serverMessage}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{serverMessage()}{serverMessage()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::server\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+
+
+
+Display a server message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a71f756e9e960c43da23faabcea6ded5c}\label{classZappy_1_1GUI_a71f756e9e960c43da23faabcea6ded5c}} 
+\index{Zappy::GUI@{Zappy::GUI}!serverTimeUnit@{serverTimeUnit}}
+\index{serverTimeUnit@{serverTimeUnit}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{serverTimeUnit()}{serverTimeUnit()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::server\+Time\+Unit (\begin{DoxyParamCaption}\item[{int}]{time\+Unit }\end{DoxyParamCaption})}
+
+
+
+Set the time unit of the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Unit} & The time unit value to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a4eb967e6d0ddaedecef14955edf7d3a0}\label{classZappy_1_1GUI_a4eb967e6d0ddaedecef14955edf7d3a0}} 
+\index{Zappy::GUI@{Zappy::GUI}!serverTimeUnitChange@{serverTimeUnitChange}}
+\index{serverTimeUnitChange@{serverTimeUnitChange}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{serverTimeUnitChange()}{serverTimeUnitChange()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::server\+Time\+Unit\+Change (\begin{DoxyParamCaption}\item[{int}]{time\+Unit }\end{DoxyParamCaption})}
+
+
+
+Change the time unit of the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Unit} & The new time unit value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a13e9670740193ca289b054c15f4497e2}\label{classZappy_1_1GUI_a13e9670740193ca289b054c15f4497e2}} 
+\index{Zappy::GUI@{Zappy::GUI}!setBroadcastId@{setBroadcastId}}
+\index{setBroadcastId@{setBroadcastId}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setBroadcastId()}{setBroadcastId()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Broadcast\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the broadcast ID for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a57c1f7161e99ad64e37e06ed56cc91d6}\label{classZappy_1_1GUI_a57c1f7161e99ad64e37e06ed56cc91d6}} 
+\index{Zappy::GUI@{Zappy::GUI}!setBroadcastMessage@{setBroadcastMessage}}
+\index{setBroadcastMessage@{setBroadcastMessage}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setBroadcastMessage()}{setBroadcastMessage()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Broadcast\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the broadcast message to be displayed on the \mbox{\hyperlink{classZappy_1_1GUI}{GUI}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The broadcast message. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_ab38c0545884a181ce16ca89a5deeb189}\label{classZappy_1_1GUI_ab38c0545884a181ce16ca89a5deeb189}} 
+\index{Zappy::GUI@{Zappy::GUI}!setClient@{setClient}}
+\index{setClient@{setClient}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setClient()}{setClient()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structclient__s}{client\+\_\+t}}}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the client information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The client information to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a8e77bc80dd388cce5368ca49af12c58b}\label{classZappy_1_1GUI_a8e77bc80dd388cce5368ca49af12c58b}} 
+\index{Zappy::GUI@{Zappy::GUI}!setPlayerInventory@{setPlayerInventory}}
+\index{setPlayerInventory@{setPlayerInventory}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setPlayerInventory()}{setPlayerInventory()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Player\+Inventory (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{food,  }\item[{int}]{linemate,  }\item[{int}]{deraumere,  }\item[{int}]{sibur,  }\item[{int}]{mendiane,  }\item[{int}]{phiras,  }\item[{int}]{thystame }\end{DoxyParamCaption})}
+
+
+
+Set the inventory of a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em x} & The x-\/coordinate of the player\textquotesingle{}s inventory. \\
+\hline
+{\em y} & The y-\/coordinate of the player\textquotesingle{}s inventory. \\
+\hline
+{\em food} & The amount of food in the player\textquotesingle{}s inventory. \\
+\hline
+{\em linemate} & The amount of linemate in the player\textquotesingle{}s inventory. \\
+\hline
+{\em deraumere} & The amount of deraumere in the player\textquotesingle{}s inventory. \\
+\hline
+{\em sibur} & The amount of sibur in the player\textquotesingle{}s inventory. \\
+\hline
+{\em mendiane} & The amount of mendiane in the player\textquotesingle{}s inventory. \\
+\hline
+{\em phiras} & The amount of phiras in the player\textquotesingle{}s inventory. \\
+\hline
+{\em thystame} & The amount of thystame in the player\textquotesingle{}s inventory. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a5690064e182dbbd7ec8f130a0424e6fb}\label{classZappy_1_1GUI_a5690064e182dbbd7ec8f130a0424e6fb}} 
+\index{Zappy::GUI@{Zappy::GUI}!setPlayerLevel@{setPlayerLevel}}
+\index{setPlayerLevel@{setPlayerLevel}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setPlayerLevel()}{setPlayerLevel()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Player\+Level (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Set the level of a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em level} & The new level of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a6137addbf8eb8dd98e28910c0c6829e1}\label{classZappy_1_1GUI_a6137addbf8eb8dd98e28910c0c6829e1}} 
+\index{Zappy::GUI@{Zappy::GUI}!setPlayerPos@{setPlayerPos}}
+\index{setPlayerPos@{setPlayerPos}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setPlayerPos()}{setPlayerPos()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Player\+Pos (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Set the position and direction of a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the player. \\
+\hline
+{\em x} & The new x-\/coordinate of the player. \\
+\hline
+{\em y} & The new y-\/coordinate of the player. \\
+\hline
+{\em direction} & The new direction of the player. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_af8f82ad29776bda13c2967a995df30e5}\label{classZappy_1_1GUI_af8f82ad29776bda13c2967a995df30e5}} 
+\index{Zappy::GUI@{Zappy::GUI}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Rotation (\begin{DoxyParamCaption}\item[{int}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the rotation value for the models. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The rotation value to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a96a3b29adf2251cf5b388f82bb6d1668}\label{classZappy_1_1GUI_a96a3b29adf2251cf5b388f82bb6d1668}} 
+\index{Zappy::GUI@{Zappy::GUI}!setTileContent@{setTileContent}}
+\index{setTileContent@{setTileContent}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setTileContent()}{setTileContent()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Tile\+Content (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{food,  }\item[{int}]{linemate,  }\item[{int}]{deraumere,  }\item[{int}]{sibur,  }\item[{int}]{mendiane,  }\item[{int}]{phiras,  }\item[{int}]{thystame }\end{DoxyParamCaption})}
+
+
+
+Set the content of a tile on the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the tile. \\
+\hline
+{\em y} & The y-\/coordinate of the tile. \\
+\hline
+{\em food} & The amount of food on the tile. \\
+\hline
+{\em linemate} & The amount of linemate on the tile. \\
+\hline
+{\em deraumere} & The amount of deraumere on the tile. \\
+\hline
+{\em sibur} & The amount of sibur on the tile. \\
+\hline
+{\em mendiane} & The amount of mendiane on the tile. \\
+\hline
+{\em phiras} & The amount of phiras on the tile. \\
+\hline
+{\em thystame} & The amount of thystame on the tile. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_aebac59cd6284e02d0f1986e70bb8fe5a}\label{classZappy_1_1GUI_aebac59cd6284e02d0f1986e70bb8fe5a}} 
+\index{Zappy::GUI@{Zappy::GUI}!setTimeOption@{setTimeOption}}
+\index{setTimeOption@{setTimeOption}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{setTimeOption()}{setTimeOption()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::set\+Time\+Option (\begin{DoxyParamCaption}\item[{int \&}]{time\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the Time Option from menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Value} & \\
+\hline
+{\em gui\+\_\+p} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZappy_1_1GUI_a235e9ef335f97988efaeb08dc4d56360}\label{classZappy_1_1GUI_a235e9ef335f97988efaeb08dc4d56360}} 
+\index{Zappy::GUI@{Zappy::GUI}!winAnimation@{winAnimation}}
+\index{winAnimation@{winAnimation}!Zappy::GUI@{Zappy::GUI}}
+\doxysubsubsection{\texorpdfstring{winAnimation()}{winAnimation()}}
+{\footnotesize\ttfamily void Zappy\+::\+GUI\+::win\+Animation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{team\+Name }\end{DoxyParamCaption})}
+
+
+
+Perform a win animation for the specified team. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em team\+Name} & The name of the winning team. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/includes/Render.\+hpp\item 
+gui/src/Camera.\+cpp\item 
+gui/src/Map.\+cpp\item 
+gui/src/Network.\+cpp\item 
+gui/src/Player.\+cpp\item 
+gui/src/Render.\+cpp\item 
+gui/src/Teams.\+cpp\item 
+gui/src/Ui.\+cpp\end{DoxyCompactItemize}

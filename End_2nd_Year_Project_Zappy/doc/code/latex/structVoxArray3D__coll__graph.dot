@@ -1,0 +1,20 @@
+digraph "VoxArray3D"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VoxArray3D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" indices" ];
+  Node2 [label="ArrayUShort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structArrayUShort.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vertices" ];
+  Node3 [label="ArrayVector3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structArrayVector3.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" array" ];
+  Node4 [label="VoxVector3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVoxVector3.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" colors" ];
+  Node5 [label="ArrayColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structArrayColor.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" array" ];
+  Node6 [label="VoxColor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVoxColor.html",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" palette" ];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_arrayChunks" ];
+  Node7 [label="CubeChunk3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structCubeChunk3D.html",tooltip=" "];
+}

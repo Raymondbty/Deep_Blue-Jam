@@ -1,0 +1,40 @@
+digraph "drwav"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="drwav",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pMetadata" ,fontname="Helvetica"];
+  Node2 [label="drwav_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__metadata.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" labelledCueRegion" ,fontname="Helvetica"];
+  Node3 [label="drwav_list_labelled\l_cue_region",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__list__labelled__cue__region.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cue" ,fontname="Helvetica"];
+  Node4 [label="drwav_cue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__cue.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pCuePoints" ,fontname="Helvetica"];
+  Node5 [label="drwav_cue_point",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__cue__point.html",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" unknown" ,fontname="Helvetica"];
+  Node6 [label="drwav_unknown_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__unknown__metadata.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bext" ,fontname="Helvetica"];
+  Node7 [label="drwav_bext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__bext.html",tooltip=" "];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inst" ,fontname="Helvetica"];
+  Node8 [label="drwav_inst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__inst.html",tooltip=" "];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" infoText" ,fontname="Helvetica"];
+  Node9 [label="drwav_list_info_text",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__list__info__text.html",tooltip=" "];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" acid" ,fontname="Helvetica"];
+  Node10 [label="drwav_acid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__acid.html",tooltip=" "];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" smpl" ,fontname="Helvetica"];
+  Node11 [label="drwav_smpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__smpl.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pLoops" ,fontname="Helvetica"];
+  Node12 [label="drwav_smpl_loop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__smpl__loop.html",tooltip=" "];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" labelOrNote" ,fontname="Helvetica"];
+  Node13 [label="drwav_list_label_or_note",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__list__label__or__note.html",tooltip=" "];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allocationCallbacks" ,fontname="Helvetica"];
+  Node14 [label="drwav_allocation_callbacks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__allocation__callbacks.html",tooltip=" "];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoryStreamWrite" ,fontname="Helvetica"];
+  Node15 [label="drwav__memory_stream\l_write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav____memory__stream__write.html",tooltip=" "];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoryStream" ,fontname="Helvetica"];
+  Node16 [label="drwav__memory_stream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav____memory__stream.html",tooltip=" "];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fmt" ,fontname="Helvetica"];
+  Node17 [label="drwav_fmt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrwav__fmt.html",tooltip=" "];
+}

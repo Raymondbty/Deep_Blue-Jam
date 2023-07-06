@@ -1,0 +1,32 @@
+digraph "Zappy::Models"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Zappy::Models",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deraumereModel\neggModel\nfoodModel\nlinemateModel\nmendianeModel\nphirasModel\nsiburModel\nthystameModel" ];
+  Node2 [label="Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structModel.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" materials" ];
+  Node3 [label="Material",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMaterial.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shader" ];
+  Node4 [label="Shader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structShader.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" maps" ];
+  Node5 [label="MaterialMap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMaterialMap.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" texture" ];
+  Node6 [label="Texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTexture.html",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" color" ];
+  Node7 [label="Color",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structColor.html",tooltip=" "];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bones" ];
+  Node8 [label="BoneInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structBoneInfo.html",tooltip=" "];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bindPose" ];
+  Node9 [label="Transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTransform.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" scale\ntranslation" ];
+  Node10 [label="Vector3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVector3.html",tooltip=" "];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rotation" ];
+  Node11 [label="Vector4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVector4.html",tooltip=" "];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" meshes" ];
+  Node12 [label="Mesh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMesh.html",tooltip=" "];
+  Node13 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transform" ];
+  Node13 [label="Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structMatrix.html",tooltip=" "];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" eggScale\nstoneScale" ];
+}

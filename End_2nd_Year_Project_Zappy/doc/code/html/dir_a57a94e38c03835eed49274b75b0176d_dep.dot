@@ -1,0 +1,14 @@
+digraph "build/_deps" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4fef79e7177ba769987a8da36c892c5f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="build" fontname="Helvetica", fontsize="10", URL="dir_4fef79e7177ba769987a8da36c892c5f.html"]
+  subgraph clusterdir_a57a94e38c03835eed49274b75b0176d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a57a94e38c03835eed49274b75b0176d.html"];
+    dir_a57a94e38c03835eed49274b75b0176d [shape=plaintext label="_deps"];
+  dir_0ac47b2fb6294f469739e5f9aae7a877 [shape=box label="raylib-build" fillcolor="white" style="filled" color="red" URL="dir_0ac47b2fb6294f469739e5f9aae7a877.html"];
+  dir_de44134b7c4f12c4fcc3bbf6f724c0c6 [shape=box label="raylib-src" fillcolor="white" style="filled" color="red" URL="dir_de44134b7c4f12c4fcc3bbf6f724c0c6.html"];
+  }
+  }
+}

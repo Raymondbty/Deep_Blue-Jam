@@ -1,0 +1,81 @@
+\hypertarget{structcontent__thread__command__s}{}\doxysection{content\+\_\+thread\+\_\+command\+\_\+s Struct Reference}
+\label{structcontent__thread__command__s}\index{content\_thread\_command\_s@{content\_thread\_command\_s}}
+
+
+Structure representing the content of a thread command. This structure represents the content of a thread command. It contains pointers to various game-\/related structures and data, including the GUI client, the executing client, the list of all clients, the list of eggs, the map, the command queue, the teams, the command string, a boolean value, and an egg ID.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+
+
+Collaboration diagram for content\+\_\+thread\+\_\+command\+\_\+s\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a75bd841777ee328b9b70651a502e5bc8}\label{structcontent__thread__command__s_a75bd841777ee328b9b70651a502e5bc8}} 
+\mbox{\hyperlink{structclient__s}{client\+\_\+t}} $\ast$ {\bfseries gui}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a6c5015b2b0512362a0c8e551aa420f19}\label{structcontent__thread__command__s_a6c5015b2b0512362a0c8e551aa420f19}} 
+\mbox{\hyperlink{structclient__s}{client\+\_\+t}} $\ast$ {\bfseries client}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a14741aa83d9fc2b475799f7411fbc271}\label{structcontent__thread__command__s_a14741aa83d9fc2b475799f7411fbc271}} 
+\mbox{\hyperlink{structclient__s}{client\+\_\+t}} $\ast$ {\bfseries list\+\_\+clients}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a582a376fc81896b347af0303a82fbbdc}\label{structcontent__thread__command__s_a582a376fc81896b347af0303a82fbbdc}} 
+\mbox{\hyperlink{structegg__s}{egg\+\_\+t}} $\ast$ {\bfseries list\+\_\+eggs}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a11f83bf67f34f6939166de1a7e4770c3}\label{structcontent__thread__command__s_a11f83bf67f34f6939166de1a7e4770c3}} 
+\mbox{\hyperlink{structmap__s}{map\+\_\+t}} $\ast$ {\bfseries map}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a7b9124e2f994fc8487fe78c4ed529fc7}\label{structcontent__thread__command__s_a7b9124e2f994fc8487fe78c4ed529fc7}} 
+\mbox{\hyperlink{structqueue__s}{queue\+\_\+t}} $\ast$ {\bfseries queue}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a4c8ec358d2235ac628103bd86ac739dd}\label{structcontent__thread__command__s_a4c8ec358d2235ac628103bd86ac739dd}} 
+\mbox{\hyperlink{structteam__s}{team\+\_\+t}} $\ast$$\ast$ {\bfseries teams}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a4f385ee30a0721549f284db99fbf5b9a}\label{structcontent__thread__command__s_a4f385ee30a0721549f284db99fbf5b9a}} 
+char $\ast$$\ast$ {\bfseries command}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_a143e5117cbd10cc9a11c433d066c1670}\label{structcontent__thread__command__s_a143e5117cbd10cc9a11c433d066c1670}} 
+bool {\bfseries boulean}
+\item 
+\mbox{\Hypertarget{structcontent__thread__command__s_ae50e3220f04feb462b639a365a4bbe26}\label{structcontent__thread__command__s_ae50e3220f04feb462b639a365a4bbe26}} 
+int {\bfseries egg\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing the content of a thread command. This structure represents the content of a thread command. It contains pointers to various game-\/related structures and data, including the GUI client, the executing client, the list of all clients, the list of eggs, the map, the command queue, the teams, the command string, a boolean value, and an egg ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gui} & Pointer to the GUI client. \\
+\hline
+{\em client} & Pointer to the executing client. \\
+\hline
+{\em list\+\_\+clients} & Pointer to the list of all clients. \\
+\hline
+{\em list\+\_\+eggs} & Pointer to the list of eggs. \\
+\hline
+{\em map} & Pointer to the map. \\
+\hline
+{\em queue} & Pointer to the command queue. \\
+\hline
+{\em teams} & Pointer to the array of teams. \\
+\hline
+{\em command} & Pointer to the command string. \\
+\hline
+{\em boulean} & Boolean value. \\
+\hline
+{\em egg\+\_\+id} & Egg ID. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+server/include/client.\+h\end{DoxyCompactItemize}

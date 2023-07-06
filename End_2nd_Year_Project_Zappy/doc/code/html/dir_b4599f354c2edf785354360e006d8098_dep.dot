@@ -1,0 +1,16 @@
+digraph "build/_deps/raylib-src/src/external/glfw" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5abd5f3fed7055a31ab2ad33474b1ba6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="external" fontname="Helvetica", fontsize="10", URL="dir_5abd5f3fed7055a31ab2ad33474b1ba6.html"]
+  subgraph clusterdir_b4599f354c2edf785354360e006d8098 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_b4599f354c2edf785354360e006d8098.html"];
+    dir_b4599f354c2edf785354360e006d8098 [shape=plaintext label="glfw"];
+  dir_bd5a4109ed2002aaa33f3dfc479bc482 [shape=box label="deps" fillcolor="white" style="filled" color="red" URL="dir_bd5a4109ed2002aaa33f3dfc479bc482.html"];
+  dir_1895082154abed2ff1c814aa8f062660 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_1895082154abed2ff1c814aa8f062660.html"];
+  dir_f99e346bddea8fef226af83a24cc4978 [shape=box label="src" fillcolor="white" style="filled" URL="dir_f99e346bddea8fef226af83a24cc4978.html"];
+  }
+  }
+  dir_f99e346bddea8fef226af83a24cc4978->dir_1895082154abed2ff1c814aa8f062660 [headlabel="1", labeldistance=1.5 headhref="dir_000061_000041.html"];
+}

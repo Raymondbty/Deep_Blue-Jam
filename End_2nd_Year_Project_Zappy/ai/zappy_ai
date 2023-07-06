@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+
+##
+## EPITECH PROJECT, 2023
+## Zappy
+## File description:
+## Entrypoint for ai program
+##
+
+from zappy import putstr, puterr, EX_OK, EX_ERR
+from zappy.client import Client
+from zappy.ai_bot import AiBot
+from zappy.roles import \
+    ROLE_STRAT
+
+from sys import argv
+from getopt import getopt, GetoptError
+
+HELP_MSG: str = """USAGE: ./zappy_ai -p port -n name -h machine
+\tport\tis the port number
+\tname\tis the name of the team
+\tmachine\tis the name of the machine; localhost by default
+"""
+
+def zappy(client: Client) -> int:
+    my_ai: AiBot = AiBot(client)
+
+    my_ai.starter()
+    while not my_ai.death:
+        my_ai.handle_message()
+        ROLE_STRAT[my_ai.player_role](my_ai)
+    my_ai.send_command("logout")
+    return EX_OK
+
+def main(args: list[str]) -> int:
+    if len(args) == 2 and args[1] == "-help":
+        putstr(HELP_MSG)
+        return EX_OK
+    if len(args) != 7 and len(args) != 5:
+        puterr("[!] Invalid number of arguments, type -help to see the usage.\n")
+        puterr(HELP_MSG)
+        return EX_ERR
+    try:
+        opts: dict = dict(getopt(args[1:], "p:n:h:")[0])
+
+        if "-p" not in opts:
+            puterr("[!] Missing required arguments \"-p\".\n")
+            puterr(HELP_MSG)
+            return EX_ERR
+        if "-n" not in opts:
+            puterr("[!] Missing required arguments \"-n\".\n")
+            puterr(HELP_MSG)
+            return EX_ERR
+
+        port: int = int(opts["-p"])
+        team: str = opts["-n"]
+        host: str = opts.get("-h", "localhost")
+        client: Client = Client(host, port, team)
+
+    except GetoptError as err:
+        puterr(f"[!] {str(err)}\n")
+        puterr(HELP_MSG)
+        return EX_ERR
+    except ValueError:
+        puterr(f"[!] Invalid port number.\n")
+        puterr(HELP_MSG)
+        return EX_ERR
+    return zappy(client)
+
+if __name__ == '__main__':
+    exit(main(argv))

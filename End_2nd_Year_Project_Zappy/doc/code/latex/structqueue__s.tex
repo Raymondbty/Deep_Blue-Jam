@@ -1,0 +1,51 @@
+\hypertarget{structqueue__s}{}\doxysection{queue\+\_\+s Struct Reference}
+\label{structqueue__s}\index{queue\_s@{queue\_s}}
+
+
+Structure representing a queue node. This structure represents a node in a queue. It contains a function pointer ptr to a function that takes acontent parameter and returns a result, a pointer content to a structure \mbox{\hyperlink{structcontent__thread__command__s}{content\+\_\+thread\+\_\+command\+\_\+s}}, an integer cd representing a cooldown value, and a pointer next to the next node in the queue.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+
+
+Collaboration diagram for queue\+\_\+s\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structqueue__s_af612891fdef05d54dfa0b9467229164a}\label{structqueue__s_af612891fdef05d54dfa0b9467229164a}} 
+void $\ast$($\ast$ {\bfseries ptr} )(void $\ast$content)
+\item 
+\mbox{\Hypertarget{structqueue__s_a3bee07adca81d0df58f2fe4d39b19ff9}\label{structqueue__s_a3bee07adca81d0df58f2fe4d39b19ff9}} 
+struct \mbox{\hyperlink{structcontent__thread__command__s}{content\+\_\+thread\+\_\+command\+\_\+s}} $\ast$ {\bfseries content}
+\item 
+\mbox{\Hypertarget{structqueue__s_a609bcf27207d0a79adf42b17dacc5be3}\label{structqueue__s_a609bcf27207d0a79adf42b17dacc5be3}} 
+int {\bfseries cd}
+\item 
+\mbox{\Hypertarget{structqueue__s_ae9ac6f9d7544f241994c6e8f7aedeaf7}\label{structqueue__s_ae9ac6f9d7544f241994c6e8f7aedeaf7}} 
+struct \mbox{\hyperlink{structqueue__s}{queue\+\_\+s}} $\ast$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a queue node. This structure represents a node in a queue. It contains a function pointer ptr to a function that takes acontent parameter and returns a result, a pointer content to a structure \mbox{\hyperlink{structcontent__thread__command__s}{content\+\_\+thread\+\_\+command\+\_\+s}}, an integer cd representing a cooldown value, and a pointer next to the next node in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Function pointer to a function. \\
+\hline
+{\em content} & Pointer to a structure \mbox{\hyperlink{structcontent__thread__command__s}{content\+\_\+thread\+\_\+command\+\_\+s}}. \\
+\hline
+{\em cd} & Cooldown value. \\
+\hline
+{\em next} & Pointer to the next node in the queue. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+server/include/client.\+h\end{DoxyCompactItemize}

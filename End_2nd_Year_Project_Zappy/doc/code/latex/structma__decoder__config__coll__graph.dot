@@ -1,0 +1,15 @@
+digraph "ma_decoder_config"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ma_decoder_config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ppCustomBackendVTables" ];
+  Node2 [label="ma_decoding_backend\l_vtable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__decoding__backend__vtable.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allocationCallbacks" ];
+  Node3 [label="ma_allocation_callbacks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__allocation__callbacks.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" resampling" ];
+  Node4 [label="ma_resampler_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__resampler__config.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pBackendVTable" ];
+  Node5 [label="ma_resampling_backend\l_vtable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__resampling__backend__vtable.html",tooltip=" "];
+}

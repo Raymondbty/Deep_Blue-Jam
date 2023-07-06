@@ -1,0 +1,11 @@
+digraph "build/_deps/raylib-src/src/external/glfw/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b4599f354c2edf785354360e006d8098 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="glfw" fontname="Helvetica", fontsize="10", URL="dir_b4599f354c2edf785354360e006d8098.html"]
+  dir_1895082154abed2ff1c814aa8f062660 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_1895082154abed2ff1c814aa8f062660.html"];
+  dir_f99e346bddea8fef226af83a24cc4978 [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f99e346bddea8fef226af83a24cc4978.html"];
+  }
+  dir_f99e346bddea8fef226af83a24cc4978->dir_1895082154abed2ff1c814aa8f062660 [headlabel="1", labeldistance=1.5 headhref="dir_000061_000041.html"];
+}

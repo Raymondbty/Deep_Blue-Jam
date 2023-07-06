@@ -1,0 +1,10 @@
+digraph "egg_s"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="egg_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Structure representing an egg. This structure represents an egg in the game. It contains an integer i..."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pos" ];
+  Node2 [label="pos_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpos__s.html",tooltip="Structure representing a position. This structure represents a position in a 2D space...."];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+}

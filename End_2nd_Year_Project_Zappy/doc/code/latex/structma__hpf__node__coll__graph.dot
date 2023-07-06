@@ -1,0 +1,30 @@
+digraph "ma_hpf_node"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ma_hpf_node",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hpf" ];
+  Node2 [label="ma_hpf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__hpf.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pHPF1" ];
+  Node3 [label="ma_hpf1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__hpf1.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" a\npR1" ];
+  Node4 [label="ma_biquad_coefficient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$unionma__biquad__coefficient.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pHPF2" ];
+  Node5 [label="ma_hpf2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__hpf2.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bq" ];
+  Node6 [label="ma_biquad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__biquad.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" a1\na2\nb0\nb1\nb2\npR1\npR2" ];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" baseNode" ];
+  Node7 [label="ma_node_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__base.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vtable" ];
+  Node8 [label="ma_node_vtable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__vtable.html",tooltip=" "];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _inputBuses\npInputBuses" ];
+  Node9 [label="ma_node_input_bus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__input__bus.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" head" ];
+  Node10 [label="ma_node_output_bus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__output__bus.html",tooltip=" "];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _outputBuses\npOutputBuses" ];
+  Node11 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNodeGraph" ];
+  Node11 [label="ma_node_graph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__graph.html",tooltip=" "];
+  Node7 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" base\nendpoint" ];
+}

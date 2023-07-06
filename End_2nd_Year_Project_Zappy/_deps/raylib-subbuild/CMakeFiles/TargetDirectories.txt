@@ -1,0 +1,3 @@
+/home/Raymondbty/tek2/suicide_zappy/B-YEP-400-PAR-4-1-zappy-guillaume.clement-bonniel-veyron/_deps/raylib-subbuild/CMakeFiles/rebuild_cache.dir
+/home/Raymondbty/tek2/suicide_zappy/B-YEP-400-PAR-4-1-zappy-guillaume.clement-bonniel-veyron/_deps/raylib-subbuild/CMakeFiles/edit_cache.dir
+/home/Raymondbty/tek2/suicide_zappy/B-YEP-400-PAR-4-1-zappy-guillaume.clement-bonniel-veyron/_deps/raylib-subbuild/CMakeFiles/raylib-populate.dir

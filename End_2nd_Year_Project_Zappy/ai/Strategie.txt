@@ -1,0 +1,81 @@
+Objectifs pour obtenir une note maximale à l'IA du Zappy :
+
+- Pour obtenir au moins un grade C au projet, les IA doivent être capables d'avoir 6 IA qui atteignent le niveau 8.
+
+- Pour obtenir un grade A au projet, les IA doivent être capables de :
+  - Avoir une stratégie offensive.
+  - Avoir une stratégie défensive.
+  - Avoir une stratégie de groupe.
+
+
+
+
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Résumé de fonctionnement de l'IA :
+
+- Il y aura 6 rôles principaux, un pour chaque IA qui atteint le niveau 8, et un rôle secondaire.
+- Les rôles principaux sont : Alpha, Beta, Charlie, Delta, Echo, Foxtrot.
+- Le rôle secondaire est : Geux.
+- Chaque rôle aura une mission particulière liée à un type de pierre spécifique à collecter.
+
+
+
+Attribution des rôles et la ponte des œufs :
+- La première IA se connecte.
+- Si elle ne reçoit pas de message de bienvenue, elle se considère en tant qu'"Alpha".
+- Elle collecte des ressources pour atteindre le niveau 2 et pond un œuf.
+- Une fois cela fait, elle retourne à l'endroit de son apparition initiale pour pondre l'œuf.
+- Une fois l'œuf éclos, Alpha attribue le rôle "Beta" à cette IA, puis Beta attribue le rôle "Charlie" à la suivante, et ainsi de suite jusqu'à Foxtrot qui attribue le rôle "Geux".
+
+
+
+Système de carte :
+- Le point d'apparition d'Alpha devient le point de référence (0,0).
+- À chaque mouvement et rotation, chaque IA conserve ce point de référence en mémoire.
+- Toutes les naissances et les rituels auront lieu en (0,0).
+- La carte est cyclique, ce qui signifie que si un joueur atteint le bord de la carte, il réapparaîtra de l'autre côté.
+
+
+
+Communication :
+- Il y aura une communication quasi omniprésente entre les membres de l'équipe.
+- Chaque joueur connaîtra l'inventaire total du groupe.
+- Chaque joueur aura une variable "map" pour stocker les informations obtenues grâce à la commande "look".
+- Chaque fois qu'un joueur effectue un "look", il transmet les informations à son équipe, permettant de cartographier la carte plus rapidement et de localiser les ennemis.
+
+
+
+Stratégie offensive :
+- Le rôle de "Geux" sera d'éjecter et de retransmettre les messages ennemis.
+- Geux recevra toutes les informations de l'équipe principale mais ne pourra pas communiquer avec elle.
+- Geux pourra avoir une carte en direct pour connaître les positions des ennemis et de son équipe afin d'éviter les agressions.
+- Geux restera au niveau 8.
+- Dès que quelqu'un repère un rassemblement ennemi, Geux pourra leur voler les pierres pour empêcher leur montée en niveau.
+
+
+
+Stratégie défensive :
+- Mise en place d'un système anti-broadcast avec un compteur de messages et un identifiant unique pour chaque message.

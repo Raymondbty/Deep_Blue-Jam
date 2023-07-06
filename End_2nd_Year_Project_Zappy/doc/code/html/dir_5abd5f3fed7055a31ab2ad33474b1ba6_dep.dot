@@ -1,0 +1,13 @@
+digraph "build/_deps/raylib-src/src/external" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_890daf0ba6a2ac3d9ba4da650bd7b2ed {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_890daf0ba6a2ac3d9ba4da650bd7b2ed.html"]
+  subgraph clusterdir_5abd5f3fed7055a31ab2ad33474b1ba6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_5abd5f3fed7055a31ab2ad33474b1ba6.html"];
+    dir_5abd5f3fed7055a31ab2ad33474b1ba6 [shape=plaintext label="external"];
+  dir_b4599f354c2edf785354360e006d8098 [shape=box label="glfw" fillcolor="white" style="filled" color="red" URL="dir_b4599f354c2edf785354360e006d8098.html"];
+  }
+  }
+}

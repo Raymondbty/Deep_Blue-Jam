@@ -18,3 +18,7 @@ Here is a project to made an AI for a virtual car in CoppeliaSim, check it out !
 # Examen Projects
 
 Those are projects i made in a small amount of time, it was indeed a test, in 4H with 1 partner.
+
+# Zappy
+
+The Zappy is a huge project for the end of the 2nd year, go see it ! It have network, GUI, and AI !

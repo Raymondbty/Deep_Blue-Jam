@@ -1,0 +1,15 @@
+digraph "VkRenderPassCreateInfo2"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="VkRenderPassCreateInfo2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pAttachments" ];
+  Node2 [label="VkAttachmentDescription2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVkAttachmentDescription2.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pSubpasses" ];
+  Node3 [label="VkSubpassDescription2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVkSubpassDescription2.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pColorAttachments\npDepthStencilAttachment\npInputAttachments\npResolveAttachments" ];
+  Node4 [label="VkAttachmentReference2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVkAttachmentReference2.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pDependencies" ];
+  Node5 [label="VkSubpassDependency2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structVkSubpassDependency2.html",tooltip=" "];
+}

@@ -1,0 +1,59 @@
+\hypertarget{structegg__s}{}\doxysection{egg\+\_\+s Struct Reference}
+\label{structegg__s}\index{egg\_s@{egg\_s}}
+
+
+Structure representing an egg. This structure represents an egg in the game. It contains an integer id representing the egg\textquotesingle{}s ID, an integer time representing the remaining time until the egg hatches, a pointer team to a string representing the team that owns the egg, a position pos representing the egg\textquotesingle{}s position, and a pointer next to the next egg in the list.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+
+
+Collaboration diagram for egg\+\_\+s\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structegg__s_a7084047db64f9f9ea15adbe6e6c4f11e}\label{structegg__s_a7084047db64f9f9ea15adbe6e6c4f11e}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{structegg__s_ae60213856b660353aba02382fdcf0b58}\label{structegg__s_ae60213856b660353aba02382fdcf0b58}} 
+int {\bfseries id\+\_\+parent}
+\item 
+\mbox{\Hypertarget{structegg__s_acdedb8a0335581a33b6e5799fe15d111}\label{structegg__s_acdedb8a0335581a33b6e5799fe15d111}} 
+int {\bfseries time}
+\item 
+\mbox{\Hypertarget{structegg__s_ab6aba4f5c7e0bba2e8d220f602d07f6a}\label{structegg__s_ab6aba4f5c7e0bba2e8d220f602d07f6a}} 
+char $\ast$ {\bfseries team}
+\item 
+\mbox{\Hypertarget{structegg__s_a095d4573ad13db87c87f0dc8604129cc}\label{structegg__s_a095d4573ad13db87c87f0dc8604129cc}} 
+\mbox{\hyperlink{structpos__s}{pos\+\_\+t}} {\bfseries pos}
+\item 
+\mbox{\Hypertarget{structegg__s_a5ca92e11a6514dc36d47a0c7a3f6cc0f}\label{structegg__s_a5ca92e11a6514dc36d47a0c7a3f6cc0f}} 
+struct \mbox{\hyperlink{structegg__s}{egg\+\_\+s}} $\ast$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing an egg. This structure represents an egg in the game. It contains an integer id representing the egg\textquotesingle{}s ID, an integer time representing the remaining time until the egg hatches, a pointer team to a string representing the team that owns the egg, a position pos representing the egg\textquotesingle{}s position, and a pointer next to the next egg in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The egg\textquotesingle{}s ID. \\
+\hline
+{\em time} & The remaining time until the egg hatches. \\
+\hline
+{\em team} & Pointer to a string representing the team that owns the egg. \\
+\hline
+{\em pos} & The egg\textquotesingle{}s position. \\
+\hline
+{\em next} & Pointer to the next egg in the list. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+server/include/client.\+h\end{DoxyCompactItemize}

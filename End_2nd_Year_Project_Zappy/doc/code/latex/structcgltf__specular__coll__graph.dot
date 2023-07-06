@@ -1,0 +1,38 @@
+digraph "cgltf_specular"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="cgltf_specular",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" specular_color_texture\nspecular_texture" ];
+  Node2 [label="cgltf_texture_view",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__texture__view.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transform" ];
+  Node3 [label="cgltf_texture_transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__texture__transform.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extras" ];
+  Node4 [label="cgltf_extras",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__extras.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" texture" ];
+  Node5 [label="cgltf_texture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__texture.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sampler" ];
+  Node6 [label="cgltf_sampler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__sampler.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extras" ];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extensions" ];
+  Node7 [label="cgltf_extension",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__extension.html",tooltip=" "];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" basisu_image\nimage" ];
+  Node8 [label="cgltf_image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__image.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buffer_view" ];
+  Node9 [label="cgltf_buffer_view",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__buffer__view.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buffer" ];
+  Node10 [label="cgltf_buffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__buffer.html",tooltip=" "];
+  Node4 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extras" ];
+  Node7 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extensions" ];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" meshopt_compression" ];
+  Node11 [label="cgltf_meshopt_compression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcgltf__meshopt__compression.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buffer" ];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extras" ];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extensions" ];
+  Node4 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extras" ];
+  Node7 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extensions" ];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extras" ];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extensions" ];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" extensions" ];
+}

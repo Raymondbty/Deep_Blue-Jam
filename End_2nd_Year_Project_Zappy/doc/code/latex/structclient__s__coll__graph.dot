@@ -1,0 +1,31 @@
+digraph "client_s"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="client_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Structure representing a client This structure represents a client in the game and a pointer next to ..."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pos" ];
+  Node2 [label="pos_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpos__s.html",tooltip="Structure representing a position. This structure represents a position in a 2D space...."];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" queue\ntmp_queue" ];
+  Node3 [label="queue_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structqueue__s.html",tooltip="Structure representing a queue node. This structure represents a node in a queue. It contains a funct..."];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" content" ];
+  Node4 [label="content_thread_command_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcontent__thread__command__s.html",tooltip="Structure representing the content of a thread command. This structure represents the content of a th..."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" teams" ];
+  Node5 [label="team_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structteam__s.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" client\ngui\nlist_clients" ];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" list_eggs" ];
+  Node6 [label="egg_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structegg__s.html",tooltip="Structure representing an egg. This structure represents an egg in the game. It contains an integer i..."];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pos" ];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" map" ];
+  Node7 [label="map_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmap__s.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tiles" ];
+  Node8 [label="tile_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structtile__s.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ressources" ];
+  Node9 [label="ressources_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structressources__s.html",tooltip=" "];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ressources" ];
+  Node3 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" queue" ];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ressources" ];
+}

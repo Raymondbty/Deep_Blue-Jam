@@ -1,0 +1,46 @@
+digraph "m3d_t"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="m3d_t",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shape" ,fontname="Helvetica"];
+  Node2 [label="m3dh_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dh__t.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cmd" ,fontname="Helvetica"];
+  Node3 [label="m3dc_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dc__t.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inlined\npreview" ,fontname="Helvetica"];
+  Node4 [label="m3di_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3di__t.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" voxtype" ,fontname="Helvetica"];
+  Node5 [label="m3dvt_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dvt__t.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" item" ,fontname="Helvetica"];
+  Node6 [label="m3dvi_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dvi__t.html",tooltip=" "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" label" ,fontname="Helvetica"];
+  Node7 [label="m3dl_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dl__t.html",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" voxel" ,fontname="Helvetica"];
+  Node8 [label="m3dvx_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dvx__t.html",tooltip=" "];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" material" ,fontname="Helvetica"];
+  Node9 [label="m3dm_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dm__t.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prop" ,fontname="Helvetica"];
+  Node10 [label="m3dp_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dp__t.html",tooltip=" "];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" texture" ,fontname="Helvetica"];
+  Node11 [label="m3dtx_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dtx__t.html",tooltip=" "];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tmap" ,fontname="Helvetica"];
+  Node12 [label="m3dti_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dti__t.html",tooltip=" "];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" action" ,fontname="Helvetica"];
+  Node13 [label="m3da_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3da__t.html",tooltip=" "];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" frame" ,fontname="Helvetica"];
+  Node14 [label="m3dfr_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dfr__t.html",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transform" ,fontname="Helvetica"];
+  Node15 [label="m3dtr_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dtr__t.html",tooltip=" "];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" skin" ,fontname="Helvetica"];
+  Node16 [label="m3ds_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3ds__t.html",tooltip=" "];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bone" ,fontname="Helvetica"];
+  Node17 [label="m3db_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3db__t.html",tooltip=" "];
+  Node18 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" weight" ,fontname="Helvetica"];
+  Node18 [label="m3dw_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dw__t.html",tooltip=" "];
+  Node19 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vertex" ,fontname="Helvetica"];
+  Node19 [label="m3dv_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3dv__t.html",tooltip=" "];
+  Node20 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" face" ,fontname="Helvetica"];
+  Node20 [label="m3df_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structm3df__t.html",tooltip=" "];
+}

@@ -1,0 +1,127 @@
+\hypertarget{structclient__s}{}\doxysection{client\+\_\+s Struct Reference}
+\label{structclient__s}\index{client\_s@{client\_s}}
+
+
+Structure representing a client This structure represents a client in the game and a pointer next to the next client in the list.  
+
+
+
+
+{\ttfamily \#include $<$client.\+h$>$}
+
+
+
+Collaboration diagram for client\+\_\+s\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structclient__s_ad187a367f6a86cf7e48746c140ab9274}\label{structclient__s_ad187a367f6a86cf7e48746c140ab9274}} 
+std\+::string {\bfseries ip}
+\item 
+\mbox{\Hypertarget{structclient__s_aceb977e366d2419347efd025042ac4aa}\label{structclient__s_aceb977e366d2419347efd025042ac4aa}} 
+int {\bfseries port}
+\item 
+\mbox{\Hypertarget{structclient__s_ab540cae378a22c2b9c0fe85378c52553}\label{structclient__s_ab540cae378a22c2b9c0fe85378c52553}} 
+int {\bfseries sock}
+\item 
+\mbox{\Hypertarget{structclient__s_a2a2d675412a318ed1c2c158af4c8070f}\label{structclient__s_a2a2d675412a318ed1c2c158af4c8070f}} 
+struct sockaddr\+\_\+in {\bfseries serv\+\_\+addr}
+\item 
+\mbox{\Hypertarget{structclient__s_acb4c9114d92b381535ffc572d4c40374}\label{structclient__s_acb4c9114d92b381535ffc572d4c40374}} 
+fd\+\_\+set {\bfseries readfds}
+\item 
+\mbox{\Hypertarget{structclient__s_a50743bbd4490b53af781d7c46fd2242b}\label{structclient__s_a50743bbd4490b53af781d7c46fd2242b}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries client\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{structclient__s_a8191719d1937f9e44d405786ce40ad7c}\label{structclient__s_a8191719d1937f9e44d405786ce40ad7c}} 
+pthread\+\_\+mutex\+\_\+t {\bfseries queue\+\_\+mutex}
+\item 
+\mbox{\Hypertarget{structclient__s_a4c1ddc94da607c36b64293050776b6c9}\label{structclient__s_a4c1ddc94da607c36b64293050776b6c9}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{structclient__s_a9babf0c4dea4b555e6b87a47f4ca98cd}\label{structclient__s_a9babf0c4dea4b555e6b87a47f4ca98cd}} 
+int {\bfseries fd}
+\item 
+\mbox{\Hypertarget{structclient__s_aebd802cb44cc1f75d619b2dd4372179e}\label{structclient__s_aebd802cb44cc1f75d619b2dd4372179e}} 
+const char $\ast$ {\bfseries name}
+\item 
+\mbox{\Hypertarget{structclient__s_a637c482d7ff7f92ba801d07c22066a5f}\label{structclient__s_a637c482d7ff7f92ba801d07c22066a5f}} 
+char $\ast$ {\bfseries actual\+\_\+team}
+\item 
+\mbox{\Hypertarget{structclient__s_a1aab0c0b3d6ddc9e0177af5a8beb8f4c}\label{structclient__s_a1aab0c0b3d6ddc9e0177af5a8beb8f4c}} 
+char $\ast$ {\bfseries type}
+\item 
+\mbox{\Hypertarget{structclient__s_a98e3855726c1ef826591688a86c13388}\label{structclient__s_a98e3855726c1ef826591688a86c13388}} 
+int {\bfseries orientation}
+\item 
+\mbox{\Hypertarget{structclient__s_a6f1c073a3d944095ea93a51ec8676c73}\label{structclient__s_a6f1c073a3d944095ea93a51ec8676c73}} 
+int {\bfseries level}
+\item 
+\mbox{\Hypertarget{structclient__s_a499286ef01b53826cbb151d8fb75a037}\label{structclient__s_a499286ef01b53826cbb151d8fb75a037}} 
+int {\bfseries survive\+\_\+time}
+\item 
+\mbox{\Hypertarget{structclient__s_af95836a2b66c0f93269dc5198a64a3bb}\label{structclient__s_af95836a2b66c0f93269dc5198a64a3bb}} 
+int {\bfseries cd\+\_\+until\+\_\+next\+\_\+action}
+\item 
+\mbox{\Hypertarget{structclient__s_af0051c385d2bb0c3e988278d830a08dc}\label{structclient__s_af0051c385d2bb0c3e988278d830a08dc}} 
+\mbox{\hyperlink{structpos__s}{pos\+\_\+t}} {\bfseries pos}
+\item 
+\mbox{\Hypertarget{structclient__s_ace2dacf5bedf1d5d515ccf0b3cd39a31}\label{structclient__s_ace2dacf5bedf1d5d515ccf0b3cd39a31}} 
+\mbox{\hyperlink{structressources__s}{ressources\+\_\+t}} {\bfseries ressources}
+\item 
+\mbox{\Hypertarget{structclient__s_a1e14f3deb18c8bd07012b1834b64d817}\label{structclient__s_a1e14f3deb18c8bd07012b1834b64d817}} 
+\mbox{\hyperlink{structqueue__s}{queue\+\_\+t}} $\ast$ {\bfseries tmp\+\_\+queue}
+\item 
+\mbox{\Hypertarget{structclient__s_a78652cb1f523dbf7e6249633d09b3e27}\label{structclient__s_a78652cb1f523dbf7e6249633d09b3e27}} 
+\mbox{\hyperlink{structqueue__s}{queue\+\_\+t}} $\ast$ {\bfseries queue}
+\item 
+\mbox{\Hypertarget{structclient__s_a2da6e696c5a2586281b3a1a8a0763b7e}\label{structclient__s_a2da6e696c5a2586281b3a1a8a0763b7e}} 
+struct \mbox{\hyperlink{structclient__s}{client\+\_\+s}} $\ast$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing a client This structure represents a client in the game and a pointer next to the next client in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+\_\+mutex} & Mutex for concurrent client management. \\
+\hline
+{\em queue\+\_\+mutex} & Mutex for concurrent queue management. \\
+\hline
+{\em id} & The client\textquotesingle{}s ID. \\
+\hline
+{\em fd} & The client\textquotesingle{}s file descriptor. \\
+\hline
+{\em name} & The client\textquotesingle{}s name. \\
+\hline
+{\em actual\+\_\+team} & The client\textquotesingle{}s current team. \\
+\hline
+{\em type} & The client\textquotesingle{}s type. \\
+\hline
+{\em orientation} & The client\textquotesingle{}s orientation. \\
+\hline
+{\em level} & The client\textquotesingle{}s level. \\
+\hline
+{\em survive\+\_\+time} & The remaining time the client can survive without food. \\
+\hline
+{\em cd\+\_\+until\+\_\+next\+\_\+action} & The cooldown until the client can perform the next action. \\
+\hline
+{\em pos} & The client\textquotesingle{}s position. \\
+\hline
+{\em ressources} & The client\textquotesingle{}s resources. \\
+\hline
+{\em tmp\+\_\+queue} & Pointer to a temporary queue of commands. \\
+\hline
+{\em queue} & Pointer to a queue of commands. \\
+\hline
+{\em next} & Pointer to the next client in the list. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/includes/Network.\+hpp\item 
+server/include/client.\+h\end{DoxyCompactItemize}

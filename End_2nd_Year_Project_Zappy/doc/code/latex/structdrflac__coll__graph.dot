@@ -1,0 +1,27 @@
+digraph "drflac"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="drflac",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" bs" ];
+  Node2 [label="drflac_bs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__bs.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pSeekpoints" ];
+  Node3 [label="drflac_seekpoint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__seekpoint.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currentFLACFrame" ];
+  Node4 [label="drflac_frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__frame.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" header" ];
+  Node5 [label="drflac_frame_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__frame__header.html",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" subframes" ];
+  Node6 [label="drflac_subframe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__subframe.html",tooltip=" "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memoryStream" ];
+  Node7 [label="drflac__memory_stream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac____memory__stream.html",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" onMeta" ];
+  Node8 [label="drflac_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__metadata.html",tooltip=" "];
+  Node3 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pSeekpoints" ];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" streaminfo" ];
+  Node9 [label="drflac_streaminfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__streaminfo.html",tooltip=" "];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allocationCallbacks" ];
+  Node10 [label="drflac_allocation_callbacks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdrflac__allocation__callbacks.html",tooltip=" "];
+}

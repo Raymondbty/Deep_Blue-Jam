@@ -1,0 +1,17 @@
+digraph "ma_node_graph"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ma_node_graph",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" base\nendpoint" ];
+  Node2 [label="ma_node_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__base.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" vtable" ];
+  Node3 [label="ma_node_vtable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__vtable.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _inputBuses\npInputBuses" ];
+  Node4 [label="ma_node_input_bus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__input__bus.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" head" ];
+  Node5 [label="ma_node_output_bus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structma__node__output__bus.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _outputBuses\npOutputBuses" ];
+  Node1 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNodeGraph" ];
+}
