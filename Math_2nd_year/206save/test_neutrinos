@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+
+import unittest
+import importlib
+
+neutrinos = importlib.import_module("206neutrinos")
+calculate_statistics = neutrinos.calculate_statistics
+
+class TestCalculateStatistics(unittest.TestCase):
+    def test_calculate_statistics(self):
+        # Test Case 1
+        n = 12000
+        a = 297514
+        h = 297912
+        sd = 4363
+        n, a, h, sd = calculate_statistics(n, a, h, sd, 299042)
+        self.assertEqual(n, 12001)
+        self.assertAlmostEqual(sd, 4362.84, places=2)
+        self.assertAlmostEqual(a, 297514.13, places=2)
+        self.assertAlmostEqual(h, 297912.09, places=2)
+
+        # Test Case 2
+        n = 0
+        a = 0
+        h = 0
+        sd = 0
+        n, a, h, sd = calculate_statistics(n, a, h, sd, 42)
+        self.assertEqual(n, 1)
+        self.assertAlmostEqual(sd, 0, places=2)
+        self.assertAlmostEqual(a, 42, places=2)
+        self.assertAlmostEqual(h, 42, places=2)
+
+        # Test Case 3
+        n = 100
+        a = 50
+        h = 100
+        sd = 10
+        n, a, h, sd = calculate_statistics(n, a, h, sd, 70)
+        self.assertEqual(n, 101)
+        self.assertAlmostEqual(sd, 9.95, places=2)
+        self.assertAlmostEqual(a, 50.49, places=2)
+        self.assertAlmostEqual(h, 100.01, places=2)
+
+        # Test Case 4
+        n = 1000
+        a = 500
+        h = 1000
+        sd = 100
+        n, a, h, sd = calculate_statistics(n, a, h, sd, 700)
+        self.assertEqual(n, 1001)
+        self.assertAlmostEqual(sd, 99.61, places=2)
+        self.assertAlmostEqual(a, 500.5, places=2)
+        self.assertAlmostEqual(h, 1000.01, places=2)
+
+if __name__ == '__main__':
+    unittest.main()

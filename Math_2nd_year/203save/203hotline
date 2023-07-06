@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+##  
+##  EPITECH PROJECT, 2023
+##  203hotline
+##  File description:
+##  math hotline bb
+##  
+import  math
+import  time
+import  sys
+
+def man_help():
+    print("USAGE")
+    print("    ./203hotline [n k | d]\n")
+    print("DESCRIPTION")
+    print("    n      n value for the computation of (n k)")
+    print("    k      k value for the computation of (n k)")
+    print("    d      average duration of calls (in seconds)")
+
+def binomial_distribution(n, tps, ton_06):
+    print("Binomial distribution:")
+    for looper in range(51):
+        final_display = take_percentage(n, looper) * (tps ** looper) * ((1 - tps) ** (n - looper))
+        if looper % 6 == 0:
+            print(f"{looper} -> {final_display:.3f}")
+        else:
+            print(f"{looper} -> {final_display:.3f}", end='\t')
+        if looper > ton_06:
+            overload = final_display
+    return overload
+
+def poisson_distribution(num_esclave, percentage, ton_06):
+    print_data = []
+    for looper in range(51):
+        final_display = math.exp(-percentage) * (percentage ** looper) / math.factorial(looper)
+        print_data.append(final_display)
+    overload = sum(print_data[ton_06+1:])
+    return print_data, overload
+
+def display_hotline_simple(call_time, n=3500, taff_time=8, ton_06=25):
+    tps = call_time / (60 * 60 * taff_time)
+    call_durée = time.time()
+    overload = binomial_distribution(n, tps, ton_06)
+    if call_time > 320:
+        overload = 1
+    print(f"\noverload: {overload * 100:.1f}%")
+    raccroche = time.time()
+    print(f"computation time: {(raccroche - call_durée) * 1000:.2f} ms")
+
+def take_percentage(n, k):
+    return math.factorial(n) // (math.factorial(k) * math.factorial(n - k))
+
+def display_percentage(n, k):
+    print(f"{k}-combination of a {n} set:\n{take_percentage(n, k)}")
+
+def display_hotline(call_time, num_esclave=3500, taff_time=8, ton_06=25):
+    start = time.time()
+    percentage = num_esclave * (call_time / (60 * 60 * taff_time))
+    print_data, overload = poisson_distribution(num_esclave, percentage, ton_06)
+    print("\nPoisson distribution:")
+    for looper, final_display in enumerate(print_data):
+        if looper % 6 == 0 and looper > 0:
+            print()
+        print(f"{looper} -> {final_display:.3f}", end='\t')
+    print(f"\noverload: {overload:.1%}")
+    end = time.time()
+    print(f"computation time: {(end - start) * 1000:.2f} ms")
+
+def man_help():
+    print("Usage: python3 {sys.argv[0]} [-h | n | n k]")
+    print("   -h      Display this help")
+    print("   n       Display hotline statistics for n seconds")
+    print("   n k     Display the k-combination of a set of n elements")
+    sys.exit()
+
+def main():
+    try:
+        args = sys.argv[1:]
+        if len(args) == 1:
+            if args[0] == "-h":
+                man_help()
+            else:
+                n = int(args[0])
+                display_hotline_simple(n)
+                display_hotline(n)
+        elif len(args) == 2:
+            n, k = map(int, args)
+            display_percentage(n, k)
+        else:
+            raise BaseException("invalid argument's number")
+    except BaseException as error:
+        print(f"{type(error).__name__}: {error}")
+        sys.exit(84)
+    except:
+        print("An error occurred!")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

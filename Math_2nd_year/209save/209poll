@@ -1,0 +1,75 @@
+#!/usr/bin/env python3
+
+import sys
+import math
+
+class InvalidInputException(Exception):
+    def __init__(self, message, errors="Wrong argument"):
+        super().__init__(message)
+        self.errors = errors
+
+class PollCalculator:
+    def __init__(self, population_size, sample_size, voting_percentage):
+        if population_size < 0 or sample_size < 0:
+            raise InvalidInputException("Population and sample sizes should be non-negative")
+        if not 0 <= voting_percentage <= 100:
+            raise InvalidInputException("Voting percentage should be between 0 and 100")
+        self.population_size = population_size
+        self.sample_size = sample_size
+        self.voting_percentage = voting_percentage
+
+    def calculate(self):
+        variance = (((self.voting_percentage * (100 - self.voting_percentage)) / 10000)
+                    / self.sample_size) * ((self.population_size - self.sample_size) / (self.population_size - 1))
+        confidence_95 = (1.96 * math.sqrt(variance) * 2) / 2 * 100
+        confidence_99 = (2.58 * math.sqrt(variance) * 2) / 2 * 100
+        return variance, confidence_95, confidence_99
+
+    def get_confidence_interval(self, confidence_level):
+        variance, confidence_95, confidence_99 = self.calculate()
+        lower_bound = max(0, self.voting_percentage - confidence_level)
+        upper_bound = min(100, self.voting_percentage + confidence_level)
+        return lower_bound, upper_bound
+
+def display_help():
+    print("USAGE\n    ./poll_calculator pSize sSize p\n\nDESCRIPTION\n    pSize   size of the "
+          "population\n    sSize   size of the sample (supposed to be representative)"
+          "\n    p       percentage of voting intentions for a specific candidate")
+
+def get_input_arguments():
+    if len(sys.argv) == 2 and sys.argv[1] == "-h":
+        display_help()
+        sys.exit(0)
+
+    if len(sys.argv) != 4:
+        raise InvalidInputException("Invalid number of arguments")
+
+    population_size = int(sys.argv[1])
+    sample_size = int(sys.argv[2])
+    voting_percentage = float(sys.argv[3])
+
+    return population_size, sample_size, voting_percentage
+
+def print_result(poll_calculator):
+    variance, confidence_95, confidence_99 = poll_calculator.calculate()
+    lower_95, upper_95 = poll_calculator.get_confidence_interval(confidence_95)
+    lower_99, upper_99 = poll_calculator.get_confidence_interval(confidence_99)
+
+    print(f"Population size:         {poll_calculator.population_size}")
+    print(f"Sample size:             {poll_calculator.sample_size}")
+    print(f"Voting intentions:       {poll_calculator.voting_percentage:.2f}%")
+    print(f"Variance:                {variance:.6f}")
+    print(f"95% confidence interval: [{lower_95:.2f}%; {upper_95:.2f}%]")
+    print(f"99% confidence interval: [{lower_99:.2f}%; {upper_99:.2f}%]")
+
+def main():
+    try:
+        population_size, sample_size, voting_percentage = get_input_arguments()
+        poll_calculator = PollCalculator(population_size, sample_size, voting_percentage)
+        print_result(poll_calculator)
+    except Exception as error:
+        print(f"Error: {error}")
+        sys.exit(84)
+
+if __name__ == "__main__":
+    main()

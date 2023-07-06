@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+from sys import argv
+
+from math import factorial
+from sys import argv
+from copy import deepcopy
+import sys
+
+def help() -> None:
+    print("USAGE\n"
+            "\t./208dowels O0 O1 O2 O3 O4 O5 O6 O7 O8\n"
+            "\n"
+            "DESCRIPTION\n"
+            "\tOi\tsize of the observed class".expandtabs(4))
+
+values_tab = [[100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 5, 3, 2],
+              [0.00, 0.01, 0.05, 0.16, 0.30, 0.46, 0.70, 1.05, 1.68, 2.70, 3.90, 5.47, 6.61],
+              [0.01, 0.20, 0.43, 0.72, 1.10, 1.38, 1.85, 2.45, 3.15, 4.60, 5.95, 7.81, 9.20],
+              [0.10, 0.55, 1.02, 1.40, 1.85, 2.33, 2.92, 3.65, 4.70, 6.20, 7.85, 9.85, 11.30],
+              [0.31, 1.01, 1.70, 2.10, 2.70, 3.35, 4.00, 4.85, 6.00, 7.80, 9.50, 11.60, 13.25],
+              [0.57, 1.55, 2.40, 3.10, 3.65, 4.30, 5.10, 6.10, 7.40, 9.25, 11.10, 13.30, 15.00],
+              [0.80, 2.05, 3.00, 3.90, 4.50, 5.30, 6.20, 7.25, 8.50, 10.60, 12.70, 15.00, 16.80],
+              [1.20, 2.70, 3.90, 4.70, 5.50, 6.35, 7.35, 8.45, 9.90, 12.00, 14.20, 16.60, 18.40],
+              [1.70, 3.40, 4.50, 5.40, 6.40, 7.40, 8.35, 9.55, 11.00, 13.30, 15.60, 18.10, 19.90],
+              [2.20, 4.00, 5.30, 6.30, 7.30, 8.30, 9.40, 10.70, 12.30, 14.70, 16.80, 19.50, 21.60],
+              [2.70, 4.70, 6.10, 7.20, 8.20, 9.40, 10.50, 11.80, 13.40, 15.90, 18.20, 21.00, 22.90]]
+
+class Meth:
+    def __init__(self):
+        self._compute = makeDumpsterFire()
+        self._input = []
+        self._x = [[i] for i in range(9)]
+        self._Ox = []
+        self._Tx = []
+        self._p = 0
+        self._chiSquare = 0
+        self._freedom = 0
+
+    def takesArg(self, args):
+        for index in range(1, len(args)):
+            self._input.append(int(args[index]))
+        self._Ox = self._input.copy()
+
+    def percentageLine(self) -> None:
+
+        def parseArgs() -> None:
+
+            def merge(lst, index):
+                lst[index] += lst[index+1]
+                lst.pop(index+1)
+
+            i = 0
+            while i < len(self._Ox):
+                if self._Ox[i] < 10:
+                    if i == 0:
+                        merge(self._Ox, i)
+                        merge(self._x, i)
+                    elif i == len(self._Ox)-1:
+                        merge(self._Ox, i-1)
+                        merge(self._x, i-1)
+                    else:
+                        if (self._Ox[i-1] <= self._Ox[i+1]):
+                            merge(self._Ox, i-1)
+                            merge(self._x, i-1)
+                        else:
+                            merge(self._Ox, i)
+                            merge(self._x, i)
+                else:
+                    i += 1
+
+        def displayResults() -> None:
+            print("   x\t|", end='')
+            for x in self._x:
+                if (len(x) > 1):
+                    if (x[-1] == 8):
+                        print(" {}+\t|".format(x[0]), end='')
+                    else:
+                        print(" {}-{}\t|".format(x[0], x[-1]), end='')
+                else:
+                    if (x[0] == 8):
+                        print(" {}+\t|".format(x[0]), end='')
+                    else:
+                        print(" {}\t|".format(x[0]), end='')
+            print(" Total")
+
+        def displayResults2() -> None:
+            print("  Ox\t|", end='')
+            for Ox in self._Ox:
+                print(" {}\t|".format(Ox), end='')
+            print(" 100")
+
+        def displayResults3() -> None:
+            print("  Tx\t|", end='')
+            rest = 100
+            for xray in self._x:
+                tmp = 0
+                for x in xray:
+                    tmp += self._compute.theoriSz(x, 100, 100, self._p)
+                rest -= tmp
+                if xray == self._x[-1]:
+                    tmp += rest
+                self._Tx.append(tmp)
+                print(" {:.1f}\t|".format(tmp), end='')
+            print(" 100")
+
+        parseArgs()
+        displayResults()
+        displayResults2()
+        displayResults3()
+
+    def displayResults4(self) -> None:
+        print("Distribution\t\tB(100, {:.4f})".format(self._p))
+
+    def displayResults5(self) -> None:
+        for i in range(len(self._Ox)):
+            self._chiSquare += ((self._Ox[i] - self._Tx[i]) ** 2) / self._Tx[i]
+
+        print("Chi-squared:\t\t{:.3f}".format(self._chiSquare))
+
+    def displayResults6(self) -> None:
+        self._freedom = len(self._x) - 2
+
+        print("Degrees of freedom:\t{:d}".format(self._freedom))
+
+    def displayResults7(self) -> None:
+        v = []
+
+        for x in range(len(values_tab[self._freedom])):
+            if (values_tab[self._freedom][x] < self._chiSquare) and (x < 12):
+                v.append(values_tab[0][x + 1])
+
+        if len(v) == 0:
+            print("Fit validity:\t\tP > 99%")
+        elif len(v) > 0 and (self._chiSquare > values_tab[self._freedom][len(v)]):
+            print("Fit validity:\t\tP < 1%")
+        else:
+            print("Fit validity:\t\t{}% < P < {}%".format(v[-1], v[-2]))
+
+    def launchWaluigi(self, argv) -> None:
+        self.takesArg(argv)
+        self._p = self._compute.breackMind(100, 100, self._x, self._Ox)
+        self.percentageLine()
+        self.displayResults4()
+        self.displayResults5()
+        self.displayResults6()
+        self.displayResults7()
+
+
+class makeDumpsterFire():
+    def breackMind(self, piecePerSample, nbSample, x, Ox) -> int:
+        sumfactorial = 0
+        for i in range(len(x)):
+            sumfactorial += (x[i][0] * Ox[i])
+        return sumfactorial / (piecePerSample * nbSample)
+
+    def percentageFact(self, n, k) -> int:
+        return factorial(n) // (factorial(k) * factorial(n-k))
+
+    def percent(self, n, k, p) -> int:
+        return self.percentageFact(n, k) * (p**k) * ((1-p)**(n-k))
+
+    def theoriSz(self, x, piecePerSample, nbSample, p) -> int:
+        return nbSample * self.percent(piecePerSample, x, p)
+
+class handleArgs:
+    def inputChecker(self, args) -> int:
+        def isNub(value) -> bool:
+            try:
+                int(value)
+            except ValueError:
+                return False
+            else:
+                return True
+
+        aSum = 0
+
+        if len(args) != 10:
+            print("Error : need 10 args\n")
+            return 84
+        for i in range(1, len(args)):
+            if not isNub(args[i]) or int(args[i]) < 0:
+                print("Error : nb must be positive\n")
+                return 84
+            aSum += int(args[i])
+        if aSum != 100:
+            print("Args total must be equal to 100\n")
+            return 84
+        return 0
+
+    def callHelper(self, args) -> bool:
+        if "-h" in args or "--help" in args:
+            return True
+        return False
+
+
+def main(args):
+    argsManager = handleArgs()
+
+    if argsManager.callHelper(args):
+        help()
+    elif argsManager.inputChecker(args) == 84:
+        exit(84)
+    else:
+        Meth().launchWaluigi(args)
+
+
+if __name__ == "__main__":
+    main(sys.argv)

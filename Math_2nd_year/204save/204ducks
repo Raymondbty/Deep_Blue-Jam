@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2023
+## B-MAT-400-PAR-4-1-204ducks-amaury.bariety
+## File description:
+## 204ducks
+##
+
+import math
+import sys
+
+def print_helper():
+    print("USAGE\n\t./204ducks a\n\nDESCRIPTION\n\ta\tconstant (between 0 and 2.5)")
+    exit(0)
+
+def f(a, t):
+    x = a * math.exp(-t) + (4 - 3 * a) * math.exp(-2 * t) + (2 * a - 4) * math.exp(-4 * t)
+    return x
+
+def f_prime(a, t):
+    x = -a * math.exp(-t) - (4 - 3 * a) / 2 * math.exp(-2 * t) - (2 * a - 4) / 4 * math.exp(-4 * t)
+    return x
+
+def average(a):
+    res = 0.0
+    t = 0.0
+    delta = 0.001
+    while t < 100:
+        res += f(a, t) * t * delta
+        t += delta
+    minutes = int(res)
+    seconds = math.ceil((res - minutes) * 60)
+    print(f"Average return time: {minutes}m {seconds}s")
+    return res
+
+def standard_deviation(a, avg):
+    res = 0.0
+    t = 0.0
+    delta = 0.001
+    while (t < 100):
+        res += f(a, t) * math.pow(t - avg, 2) * delta
+        t += delta
+    std_dev = math.sqrt(res)
+    print(f"Standard deviation: {std_dev:.3f}")
+
+def get_time(a, limit):
+    t = 0.0
+    res = 0.0
+    while (res < limit):
+        res = f_prime(a, t / 60) - f_prime(a, 0)
+        t += 0.01
+    t = int(t)
+    minutes, seconds = divmod(t, 60)
+    print(f"Time after which {int(limit * 100)}% of the ducks are back: {minutes}m {seconds:02d}s")
+
+
+def get_amount(a, limit):
+    x = (f_prime(a, limit) - f_prime(a, 0)) * 100
+    return x
+
+def main(argc: int, argv: list):
+    if (argc != 2):
+        exit(84)
+    if (argc == 2):
+        try:
+            a = float(argv[1])
+        except ValueError:
+            exit(84)
+    if (argv[1] == "-h"):
+        print_helper()
+    if (a > 2.5 or a < 0):
+        exit(84)
+    avg = average(a)
+    standard_deviation(a, avg)
+    get_time(a, 0.5)
+    get_time(a, 0.99)
+    amount_1min = get_amount(a, 1)
+    print(f"Percentage of ducks back after 1 minute: {amount_1min:.1f}%")
+    amount_2min = get_amount(a, 2)
+    print(f"Percentage of ducks back after 2 minutes: {amount_2min:.1f}%")
+    exit(0)
+
+argc = len(sys.argv)
+argv = sys.argv
+main(argc, argv)

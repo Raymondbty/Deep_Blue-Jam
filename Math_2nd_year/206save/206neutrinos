@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+import sys
+import math
+
+def help_message():
+    print("USAGE")
+    print("    ./206neutrinos n a h sd\n")
+    print("DESCRIPTION")
+    print("    n      number of values")
+    print("    a      arithmetic mean")
+    print("    h      harmonic mean")
+    print("    sd     standard deviation")
+
+def parse_args():
+    try:
+        n, a, h, sd = [float(arg) for arg in sys.argv[1:]]
+        if n <= 0 or sd < 0:
+            raise ValueError
+    except (ValueError, IndexError):
+        help_message()
+        sys.exit(84)
+    return n, a, h, sd
+
+def calculate_statistics(n, a, h, sd, value):
+    total = a * n
+    temp = (sd * sd + a * a) * n
+    n += 1
+    a = (total + value) / n
+    sd = math.sqrt(((temp + pow(value, 2)) / n) - pow(a, 2))
+    h = n / ((1 / value) + ((n - 1) / h))
+    return n, a, h, sd
+
+def check_value(input_str):
+    if input_str == "END":
+        sys.exit(0)
+    try:
+        value = float(input_str)
+        if value < 0:
+            sys.exit(84)
+    except:
+        print("Error: Invalid input format")
+        sys.exit(84)
+    return value
+
+def print_statistics(n, a, h, sd):
+    root_mean_square = math.sqrt((sd * sd) + (a * a))
+    print("    Number of values:    %d" % n)
+    print("    Standard deviation:  %.2f" % sd)
+    print("    Arithmetic mean:     %.2f" % a)
+    print("    Root mean square:    %.2f" % root_mean_square)
+    print("    Harmonic mean:       %.2f\n" % h)
+
+
+def process_values(n, a, h, sd):
+    while True:
+        input_str = input("Enter next value: ")
+        value = check_value(input_str)
+        n, a, h, sd = calculate_statistics(n, a, h, sd, value)
+        print_statistics(n, a, h, sd)
+
+def run():
+    n, a, h, sd = parse_args()
+    process_values(n, a, h, sd)
+    sys.exit(0)
+
+if __name__ == "__main__":
+    run()
