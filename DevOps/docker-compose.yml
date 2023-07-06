@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_conf:/var/jenkins_conf
+      - jenkins_home:/var/jenkins_home
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+      - USER_NASSO_PASSWORD=root
+      - USER_I_DONT_KNOW_PASSWORD=root
+      - USER_VAUGIE_G_PASSWORD=root
+      - USER_CHOCOLATEEN_PASSWORD=admin
+      - CASC_JENKINS_CONFIG=/var/jenkins_conf/
+volumes:
+  jenkins_home:
+  jenkins_conf:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: /path/to/my_marvin.yml
