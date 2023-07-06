@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/plazza.dir/src/Cook.cpp.o CMakeFiles/plazza.dir/src/InitPizza.cpp.o CMakeFiles/plazza.dir/src/Kitchen.cpp.o CMakeFiles/plazza.dir/src/Main.cpp.o CMakeFiles/plazza.dir/src/MakeReception.cpp.o CMakeFiles/plazza.dir/src/Pizza.cpp.o -o plazza 

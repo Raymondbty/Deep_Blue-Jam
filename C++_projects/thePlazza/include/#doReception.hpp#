@@ -1,0 +1,19 @@
+/*
+** EPITECH PROJECT, 2023
+** doRecepetion.hpp
+** File description:
+** MAMMA MIAA
+*/
+#ifndef RECEPTION_HPP_
+#define RECEPTION_HPP_
+
+#include <iostream>
+#include <cstdlib>
+
+class Reception {
+    public:
+        Reception();
+        ~Reception()
+    int doReception(double multiplier, int nb_cooks, int time) {
+
+};

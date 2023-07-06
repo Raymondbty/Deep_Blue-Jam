@@ -1,0 +1,3 @@
+/home/Raymondbty/tek2/Concurrent_Programming/B-CCP-400-PAR-4-1-theplazza-louis.de-macedo/CMakeFiles/rebuild_cache.dir
+/home/Raymondbty/tek2/Concurrent_Programming/B-CCP-400-PAR-4-1-theplazza-louis.de-macedo/CMakeFiles/edit_cache.dir
+/home/Raymondbty/tek2/Concurrent_Programming/B-CCP-400-PAR-4-1-theplazza-louis.de-macedo/CMakeFiles/plazza.dir
